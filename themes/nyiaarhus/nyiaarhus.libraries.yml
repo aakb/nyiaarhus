@@ -1,0 +1,11 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/styles.css: { media: screen }
+
+global-js:
+  version: VERSION
+  js:
+    js/nyiaarhus_header_scrolling.js: {}
+    js/nyiaarhus_menu_toggle.js: {}
