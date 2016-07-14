@@ -9,7 +9,7 @@ _core:
 id: nyiaarhus_messages
 theme: nyiaarhus
 region: '-1'
-weight: 0
+weight: -3
 provider: null
 plugin: system_messages_block
 settings:

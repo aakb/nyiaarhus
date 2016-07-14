@@ -4,6 +4,8 @@ dependencies:
     - system
   theme:
     - nyiaarhus
+_core:
+  default_config_hash: aoCX6f76IAz0Ys48lAqE8VryrgKPCuPW1Hj7EnN5Q4Q
 id: nyiaarhus_sitebranding
 theme: nyiaarhus
 region: nav_menu

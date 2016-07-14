@@ -1,15 +1,14 @@
 name: Ny i Aarhus
 type: theme
-description: 'The Itkore base theme.'
-package: Itkore
+description: 'The Ny i Aarhus theme.'
+package: Ny i Aarhus
+base theme: itkore_base
+
+stylesheets-remove:
+  - profiles/itkore/themes/itkore_base/css/styles.css
 
 libraries:
   - nyiaarhus/global-styling
-  - nyiaarhus/global-js
-
-stylesheets-remove:
-  - normalize.css
-  - itk-admin-links.css
 
 regions:
   hamburger: 'Hamburger menu'

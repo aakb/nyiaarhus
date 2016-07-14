@@ -6,7 +6,7 @@ dependencies:
   theme:
     - nyiaarhus
 id: itkadminlinks_nyiaarhus
-theme: itkore_nyiaarhus
+theme: nyiaarhus
 region: content
 weight: -3
 provider: null

@@ -6,6 +6,8 @@ dependencies:
     - system
   theme:
     - nyiaarhus
+_core:
+  default_config_hash: ACw1-yU5DjrIBg4Bej3SEBl1hqiSaNAYkw05ZiJI92M
 id: nyiaarhus_mainnavigation
 theme: nyiaarhus
 region: nav_menu
