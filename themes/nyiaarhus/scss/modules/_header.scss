@@ -8,4 +8,5 @@
 .header {
   position: absolute;
   width: 100%;
+  z-index: z($z-index-elements, header);
 }
