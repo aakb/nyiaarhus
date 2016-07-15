@@ -12,14 +12,14 @@
 .logo.is-sticky,
 .is-frontpage .logo.is-sticky {
   @include strip-link-styles($white);
+  @include layout-spacing;
 
+  align-items: center;
   background-repeat: no-repeat;
-  height: 3em;
-  left: $layout-padding;
+  display: flex;
+  height: 36px;
   max-width: 75%;
-  overflow: hidden;
   position: absolute;
-  top: 1.3em;
   width: auto;
   z-index: z($z-index-elements, logo);
 
@@ -27,18 +27,11 @@
     position: fixed;
   }
 
-  // Supported image tags
-  > img,
-  > svg {
-    height: 3em;
-    width: auto;
-  }
-
   // If text instead of image.
   &--text {
     font-size: 1.5em;
     font-weight: 300;
-    line-height: 1.4em;
+    line-height: 100%;
     text-transform: uppercase;
   }
 }

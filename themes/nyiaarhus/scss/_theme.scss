@@ -2,7 +2,6 @@
    ================================================================================================================== */
 
 /* stylelint-disable */
-
 $black:            #000;
 $white:            #fff;
 
@@ -30,5 +29,27 @@ $error-color:                    #ffbaba;
 /* Typography
    ================================================================================================================== */
 
-$font-family:      "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family:      "Open Sans", Helvetica, Arial, sans-serif;
 $font:             1em/1.5 $font-family;
+
+
+/* Layout
+   ================================================================================================================== */
+
+$layout-max-width-lap:    100%;
+$layout-max-width-tablet: 100%;
+$layout-max-width-desk:   1200px;
+$layout-padding:  1.8em;
+
+
+/* Spacing
+   ================================================================================================================== */
+
+$spacing-lap:             20px;
+$spacing-lap-large:       30px;
+$spacing-tablet:          20px;
+$spacing-tablet-large:    40px;
+$spacing-desk:            30px;
+$spacing-desk-large:      60px;
+$spacing-bigscreen:       30px;
+$spacing-bigscreen-large: 60px;

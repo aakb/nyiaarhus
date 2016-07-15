@@ -103,35 +103,41 @@
 // hamburger menu toggle-effect
 
 .nav-toggle {
+  @include layout-spacing;
+
   cursor: pointer;
   height: 36px;
   position: absolute;
-  right: 2em;
-  top: 1.6em;
+  right: 0;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   width: 40px;
   z-index: z($z-index-elements, nav-toggle);
 
-  @include breakpoint($breakpoint-desk) {
-    position: fixed;
-  }
-
   span {
     background: $white;
     display: block;
-    height: 5px;
+    height: 3px;
     left: 0;
     opacity: 1;
     position: absolute;
     transform: rotate(0deg);
     transition: .25s ease-in-out;
-    width: 100%;
+    width: 40px;
+  }
+
+  span:nth-child(2) {
+    background: transparent;
+  }
+
+  span:nth-child(3) {
+    left: 10px;
+    width: 75%;
   }
 
   &.is-open {
     span {
-      background: $black;
+      background: $gray-darkest;
     }
   }
 }
@@ -152,16 +158,18 @@
 .nav-toggle.is-open span:nth-child(1) {
   left: 50%;
   top: 15px;
-
   width: 0%;
 }
 
 .nav-toggle.is-open span:nth-child(2) {
+  background: $gray-darkest;
   transform: rotate(45deg);
 }
 
 .nav-toggle.is-open span:nth-child(3) {
+  left: 0;
   transform: rotate(-45deg);
+  width: 100%;
 }
 
 .nav-toggle.is-open span:nth-child(4) {
