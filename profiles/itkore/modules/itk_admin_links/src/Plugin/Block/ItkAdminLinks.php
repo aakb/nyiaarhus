@@ -34,7 +34,7 @@ class ItkAdminLinks extends BlockBase {
       '#cache' => array(
         'max-age' => 0,
       ),
-      '#nid' => $variables['nid'],
+      '#nid' => isset($variables['nid']) ? $variables['nid'] : '',
     );
   }
 }
