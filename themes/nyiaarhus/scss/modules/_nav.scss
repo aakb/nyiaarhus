@@ -4,6 +4,7 @@
  *
  */
 
+$hamburger-menu-offset: 40px;
 
 .is-frontpage {
   .nav,
@@ -39,6 +40,10 @@
   @include breakpoint($breakpoint-desk) {
     display: flex;
     max-width: $layout-max-width-desk;
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    padding-right: $hamburger-menu-offset + $spacing-desk;
   }
 
   &--links {
@@ -100,7 +105,7 @@
   top: 0;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
-  width: 40px;
+  width: $hamburger-menu-offset;
   z-index: z($z-index-elements, nav-toggle);
 
   span {
