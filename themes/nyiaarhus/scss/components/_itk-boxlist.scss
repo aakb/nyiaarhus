@@ -37,16 +37,19 @@
     @include breakpoint($breakpoint-tablet) {
       flex-basis: calc(50% - #{$spacing-tablet});
       margin-right: $spacing-tablet;
+      margin-top: $spacing-tablet;
     }
 
     @include breakpoint($breakpoint-desk) {
       flex-basis: calc(33.333% - #{$spacing-desk});
       margin-right: $spacing-desk;
+      margin-top: $spacing-desk;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
       flex-basis: calc(33.333% - #{$spacing-bigscreen});
       margin-right: $spacing-bigscreen;
+      margin-top: $spacing-bigscreen;
     }
   }
 
