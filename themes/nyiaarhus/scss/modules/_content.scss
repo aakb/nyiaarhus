@@ -87,7 +87,7 @@
   h4,
   &--header,
   &--lead {
-    font-weight: 600;
+    font-weight: 800;
   }
 
   &--header,
@@ -101,6 +101,7 @@
     margin-left: -.075em; /* Compensate for font whitespace */
     margin-right: 0;
     margin-top: .5em;
+    text-transform: uppercase;
   }
 
   &--meta {
@@ -111,7 +112,6 @@
   }
 
   &--image-wrapper {
-    margin-bottom: 2.5em;
     position: relative;
 
     @include breakpoint($breakpoint-desk) {

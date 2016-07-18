@@ -56,14 +56,15 @@
     a {
       @include strip-link-styles($gray-darkest, none);
 
-      font-weight: 600;
+      font-weight: 800;
+      text-transform: uppercase;
 
       &:hover {
         color: $theme-color;
       }
 
       &.is-sub {
-        font-weight: 200;
+        font-weight: 300;
       }
     }
   }

@@ -12,23 +12,41 @@
 
 // Gallery display ( Frontpage promoted)
 .itk-boxlist-gallery {
-  @include layout-spacing(false, true ,true, true);
+  @include layout-spacing(false, true , true, false);
 
   display: flex;
   flex-flow: row wrap;
 
+  @include breakpoint($breakpoint-tablet) {
+    @include layout-spacing(false, true, false, false);
+
+    margin-right: 0;
+  }
+
   &--item {
     box-sizing: border-box;
     display: flex;
-    flex: 0 0 100%;
+    flex-basis: 100%;
     flex-flow: column nowrap; /* Build as column to position elements vertically */
+    flex-grow: 0;
+    flex-shrink: 0;
     justify-content: flex-start;
-    padding-bottom: 3em;  /* Make room for footer link absolute positioning. */
+    margin-top: $spacing-lap;
     position: relative;
 
     @include breakpoint($breakpoint-tablet) {
-      flex: 0 0 calc(33% - 30px);
+      flex-basis: calc(50% - #{$spacing-tablet});
       margin-right: $spacing-tablet;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      flex-basis: calc(33.333% - #{$spacing-desk});
+      margin-right: $spacing-desk;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      flex-basis: calc(33.333% - #{$spacing-bigscreen});
+      margin-right: $spacing-bigscreen;
     }
   }
 
@@ -39,17 +57,21 @@
     order: 2;
   }
 
-  // Allow header to expand
   &--header {
     @include layout-spacing(false, true , true, true);
 
     flex: 0 0 auto;
+    font-size: 1.1em;
     font-weight: 800;
     margin-bottom: 0; /* Override base styling */
     text-transform: uppercase;
 
     a {
       @include strip-link-styles($gray-darkest);
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 1.25em;
     }
   }
 
@@ -65,7 +87,7 @@
   &--content {
     @include layout-spacing(false, true , true, true);
 
-    height: 5em;
+    height: 4.5em;
     overflow: hidden;
     position: relative;
 

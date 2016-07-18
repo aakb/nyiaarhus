@@ -17,15 +17,22 @@
   width: 100%;
 
   &--content {
+    box-sizing: border-box;
     color: $white;
     display: flex;
     flex-flow: row wrap;
     margin-left: auto;
     margin-right: auto;
-    max-width: $breakpoint-desk;
-    padding-left: $layout-padding;
-    padding-right: $layout-padding;
-    padding-top: $layout-padding;
+    max-width: $layout-max-width-desk;
+    padding: $spacing-lap;
+
+    @include breakpoint($breakpoint-tablet) {
+      padding: $spacing-tablet;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      padding: $spacing-desk;
+    }
 
     ul,
     ol {
@@ -37,7 +44,6 @@
   &--left,
   &--right {
     flex: 0 0 100%;
-    padding-bottom: $layout-padding;
   }
 
   &--left {
