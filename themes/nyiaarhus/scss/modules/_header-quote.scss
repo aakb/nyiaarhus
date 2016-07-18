@@ -9,8 +9,8 @@
   background-size: cover;
   color: $white;
   display: flex;
-  min-height: 200px;
-  position: absolute;
+  min-height: 235px;
+  position: relative;
   width: 100%;
 
   &:before {
@@ -20,15 +20,15 @@
   }
 
   @include breakpoint($breakpoint-tablet) {
-    min-height: 260px;
+    min-height: 320px;
   }
 
   @include breakpoint($breakpoint-desk) {
-    min-height: 380px;
+    min-height: 420px;
   }
 
   @include breakpoint($breakpoint-bigscreen) {
-    min-height: 500px;
+    min-height: 520px;
   }
 
   &--inner {
@@ -44,6 +44,7 @@
     z-index: z($z-index-elements, header);
 
     @include breakpoint($breakpoint-tablet) {
+      margin-bottom: $spacing-tablet-large;
       margin-left: auto;
       margin-right: auto;
       max-width: 500px;

@@ -12,9 +12,10 @@
 
 // Gallery display ( Frontpage promoted)
 .itk-boxlist-gallery {
+  @include layout-spacing(false, true ,true, true);
+
   display: flex;
   flex-flow: row wrap;
-
 
   &--item {
     box-sizing: border-box;
@@ -22,27 +23,34 @@
     flex: 0 0 100%;
     flex-flow: column nowrap; /* Build as column to position elements vertically */
     justify-content: flex-start;
-    margin-bottom: $layout-padding;
     padding-bottom: 3em;  /* Make room for footer link absolute positioning. */
-    padding-left: $layout-padding; /* Have each element define it's side padding */
-    padding-right: $layout-padding;
     position: relative;
-    text-align: center;
 
     @include breakpoint($breakpoint-tablet) {
-      flex: 0 0 50%;
+      flex: 0 0 calc(33% - 30px);
+      margin-right: $spacing-tablet;
     }
+  }
 
-    @include breakpoint($breakpoint-desk) {
-      flex: 0 0 33%;
-    }
+  &--item-inner {
+    border-bottom: 1px dashed $gray-light;
+    border-left: 1px dashed $gray-light;
+    border-right: 1px dashed $gray-light;
+    order: 2;
   }
 
   // Allow header to expand
   &--header {
+    @include layout-spacing(false, true , true, true);
+
     flex: 0 0 auto;
-    order: 2;
-    width: 100%;
+    font-weight: 800;
+    margin-bottom: 0; /* Override base styling */
+    text-transform: uppercase;
+
+    a {
+      @include strip-link-styles($gray-darkest);
+    }
   }
 
   // Class name created from image style.
@@ -50,46 +58,38 @@
     align-self: center;
     display: block;
     flex: 0 0 auto;
-    margin-bottom: 1em;
-    margin-top: 1.25em;
-    max-width: 5em;
     order: 1;
     width: 100%;
   }
 
-  // Allow content to expand.
   &--content {
-    flex: 1 0 auto;
-    margin-bottom: 1em;
-    order: 3;
-    width: 100%;
+    @include layout-spacing(false, true , true, true);
+
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+
+    &:before {
+      background-image: linear-gradient(to bottom, transparent 50%, $white 100%);
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: z($z-index-elements, fade);
+    }
   }
 
   // Absolutely positioned from bottom.
   &--link {
-    @include strip-link-styles($link-color);
+    @include layout-spacing;
 
-    background-color: transparent;
-    border: 1px solid $link-color;
-    border-radius: 5em;
-    bottom: 0;
-    font-weight: 300;
-    left: 0;
-    margin-left: auto;
-    margin-right: auto;
-    order: 4;
-    padding: .5em 1em;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    transition: background-color .5s, border .5s, color .5s;
-    width: 200px;
-
-    &:hover {
-      background-color: $link-color;
-      border: 1px solid $link-color;
-      color: $white;
-    }
+    background: url("../images/link.png") no-repeat;
+    background-size: 1.4em;
+    display: block;
+    line-height: 1.4em;
+    padding-left: 1.75em;
   }
 }
 
@@ -120,7 +120,6 @@
   .news-teaser-image {
     flex: 0 0 72px;
     height: 72px; /* Static height to ensure a quadratic container */
-    padding-right: $layout-padding / 2; /* Share padding with content in case of no image. */
 
     @include breakpoint($breakpoint-tablet) {
       flex: 0 0 150px;
@@ -137,14 +136,6 @@
   &--content {
     box-sizing: border-box;
     flex: 1 1 auto;
-    padding-left: $layout-padding / 2; /* Share padding with image in case of no image. */
-
-    // add additional borders on desktop display.
-    @include breakpoint($breakpoint-desk) {
-      padding-bottom: $layout-padding;
-      padding-right: $layout-padding;
-      padding-top: $layout-padding;
-    }
   }
 
   &--meta {
@@ -161,230 +152,3 @@
     width: 200px; /* Same as other butttons/links on frontpage */
   }
 }
-
-
-
-
-/*
-.itk-boxlist {
-  margin-left: $layout-padding;
-  margin-right: $layout-padding;
-  margin-top: 3em;
-
-  @include breakpoint($breakpoint-bigscreen) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  &--item {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-
-  &--item + &--item {
-    border-top: 1px solid $gray-lighter;
-    margin-top: 2em;
-    padding-top: 2em;
-  }
-
-  &--wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $breakpoint-desk;
-  }
-
-  &--header {
-    font-weight: 600;
-    margin-bottom: 0;
-
-    a {
-      @include strip-link-styles($gray-darker);
-    }
-  }
-
-  &--header + p,
-  &--meta + p {
-    margin-top: .75em;
-  }
-
-  header {
-    flex-basis: auto;
-    flex-flow: row nowrap;
-    flex-grow: 1;
-    flex-shrink: 1;
-    order: 2;
-    padding-top: 0;
-
-    @include breakpoint(600px) {
-      padding-left: $layout-padding;
-      padding-right: $layout-padding;
-    }
-
-    p + a {
-      display: inline-block;
-      margin-top: .75em;
-    }
-  }
-
-  figure {
-    flex-shrink: 1;
-    margin-right: 1em;
-    max-width: 6em;
-    order: 1;
-
-    @include breakpoint($breakpoint-desk) {
-      max-width: 15em;
-    }
-  }
-
-  &--meta {
-    color: $gray-light;
-  }
-
-  &--link,
-  &--link:link,
-  &--link:visited {
-    background-color: transparent;
-    border: 1px solid $link-color;
-    border-radius: 5em;
-    box-sizing: border-box;
-    color: $link-color;
-    display: block;
-    font-weight: 300;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 75%;
-    order: 4;
-    padding: .5em 1em;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color .5s, border .5s, color .5s;
-
-    &:hover {
-      background-color: $link-color;
-      border: 1px solid $link-color;
-      color: $white;
-    }
-
-    @include breakpoint($breakpoint-desk) {
-      max-width: 100%;
-    }
-  }
-}
-
-*/
-/*
-.itk-boxlist-gallery {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin-left: $layout-padding;
-  margin-right: $layout-padding;
-  margin-top: 3em;
-
-  @include breakpoint($breakpoint-tablet) {
-    margin-bottom: 4em;
-  }
-
-  @include breakpoint($breakpoint-bigscreen) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  &--item {
-    display: flex;
-    flex-basis: 40%;
-    flex-flow: column;
-    margin-bottom: 4em;
-    margin-left: $layout-padding;
-    margin-right: 1em;
-
-    @include breakpoint($breakpoint-tablet) {
-      flex-basis: 45%;
-    }
-
-    @include breakpoint($breakpoint-lap) {
-      padding-bottom: 0;
-      padding-top: 0;
-    }
-
-    @include breakpoint($breakpoint-desk) {
-      flex-basis: 30%;
-    }
-
-    header {
-      font-size: .75em;
-      order: 2;
-      text-align: center;
-
-      @include breakpoint($breakpoint-lap) {
-        text-align: center;
-      }
-
-      h2 {
-        @include breakpoint($breakpoint-lap) {
-          font-weight: 300;
-          margin-bottom: 0;
-        }
-      }
-
-      a {
-        @include strip-link-styles($theme-color);
-      }
-    }
-
-    figure {
-      display: block;
-      margin-bottom: 1em;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 1.25em;
-      max-width: 5em;
-      order: 1;
-
-      @include breakpoint($breakpoint-lap) {
-        max-width: 6em;
-      }
-    }
-
-    p {
-      margin-bottom: 1.25em;
-      margin-top: .75em;
-      min-height: 3em;
-      order: 3;
-      text-align: center;
-    }
-  }
-
-  &--link,
-  &--link:link,
-  &--link:visited {
-    background-color: transparent;
-    border: 1px solid $link-color;
-    border-radius: 5em;
-    box-sizing: border-box;
-    color: $link-color;
-    display: block;
-    font-weight: 300;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 75%;
-    order: 4;
-    padding: .5em 1em;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color .5s, border .5s, color .5s;
-
-    &:hover {
-      background-color: $link-color;
-      border: 1px solid $link-color;
-      color: $white;
-    }
-
-    @include breakpoint($breakpoint-desk) {
-      max-width: 100%;
-    }
-  }
-}
-
-*/

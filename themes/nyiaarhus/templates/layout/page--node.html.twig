@@ -84,21 +84,13 @@
     </div>
   </nav>
 </div>
-<div class="header-quote" role="banner" id="home" style="background-image: url({{ front_image }})">
-  <div class="header-quote--inner">
-    <p class="header-quote--content">
-      Aarhus er ikke en by man flytter fra - det er en by man flytter til
-    </p>
-    <p class="header-quote--author">
-      - Studerende i Aarhus
-    </p>
-  </div>
-</div>
-
 <main role="main" class="content">
-  <div class="content--inner">
-    {{ page.content }}
-  </div>
+  {% if node_no_image %}
+    <figure class="content--image-wrapper">
+      <img src="{{ default_image }}">
+    </figure>
+  {% endif %}
+  {{ page.content }}
 </main>
 
 {% include '@itkore_base/layout/_footer.html.twig' %}
