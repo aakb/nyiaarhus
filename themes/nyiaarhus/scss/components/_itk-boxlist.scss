@@ -12,7 +12,7 @@
 
 // Gallery display ( Frontpage promoted)
 .itk-boxlist-gallery {
-  @include layout-spacing(false, true , true, false);
+  @include layout-spacing(false, true, true, false);
 
   display: flex;
   flex-flow: row wrap;
@@ -27,6 +27,8 @@
   }
 
   &--item {
+    @include layout-spacing(false, false, true, true);
+
     box-sizing: border-box;
     display: flex;
     flex-basis: 100%;
@@ -34,22 +36,18 @@
     flex-grow: 0;
     flex-shrink: 0;
     justify-content: flex-start;
-    margin-top: $spacing-lap;
     position: relative;
 
     @include breakpoint($breakpoint-tablet) {
       flex-basis: calc(50% - #{$spacing-tablet});
-      margin-right: $spacing-tablet;
     }
 
     @include breakpoint($breakpoint-desk) {
       flex-basis: calc(33.333% - #{$spacing-desk});
-      margin-right: $spacing-desk;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
       flex-basis: calc(33.333% - #{$spacing-bigscreen});
-      margin-right: $spacing-bigscreen;
     }
   }
 
