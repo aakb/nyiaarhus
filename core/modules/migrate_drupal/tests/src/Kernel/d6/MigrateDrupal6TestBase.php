@@ -28,14 +28,7 @@ abstract class MigrateDrupal6TestBase extends MigrateDrupalTestBase {
    */
   protected function setUp() {
     parent::setUp();
-    $this->loadFixture($this->getFixtureFilePath());
-  }
-
-  /**
-   * Gets the path to the fixture file.
-   */
-  protected function getFixtureFilePath() {
-    return __DIR__ . '/../../../fixtures/drupal6.php';
+    $this->loadFixture( __DIR__ . '/../../../fixtures/drupal6.php');
   }
 
   /**

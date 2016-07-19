@@ -463,11 +463,14 @@ function node_revision_load($vid = NULL) {
 /**
  * Deletes a node revision.
  *
- * @param int $revision_id
+ * @param $revision_id
  *   The revision ID to delete.
+ *
+ * @return bool
+ *   TRUE if the revision deletion was successful; otherwise, FALSE.
  */
 function node_revision_delete($revision_id) {
-  \Drupal::entityTypeManager()->getStorage('node')->deleteRevision($revision_id);
+  entity_revision_delete('node', $revision_id);
 }
 
 /**
@@ -1078,9 +1081,8 @@ function node_query_node_access_alter(AlterableInterface $query) {
 
   // Bubble the 'user.node_grants:$op' cache context to the current render
   // context.
-  $request = \Drupal::requestStack()->getCurrentRequest();
   $renderer = \Drupal::service('renderer');
-  if ($request->isMethodSafe() && $renderer->hasRenderContext()) {
+  if ($renderer->hasRenderContext()) {
     $build = ['#cache' => ['contexts' => ['user.node_grants:' . $op]]];
     $renderer->render($build);
   }

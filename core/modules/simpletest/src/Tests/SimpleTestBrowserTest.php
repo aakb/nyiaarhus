@@ -127,7 +127,7 @@ class SimpleTestBrowserTest extends WebTestBase {
 
     $tests = array(
       // A KernelTestBase test.
-      'Drupal\KernelTests\KernelTestBaseTest',
+      'Drupal\system\Tests\DrupalKernel\DrupalKernelTest',
       // A PHPUnit unit test.
       'Drupal\Tests\action\Unit\Menu\ActionLocalTasksTest',
       // A PHPUnit functional test.

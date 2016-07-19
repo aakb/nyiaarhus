@@ -268,7 +268,6 @@ class Datelist extends DateElementBase {
         '#options' => $options,
         '#required' => $element['#required'],
         '#error_no_message' => FALSE,
-        '#empty_option' => $title,
       );
     }
 

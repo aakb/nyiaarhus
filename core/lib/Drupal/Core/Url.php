@@ -272,11 +272,7 @@ class Url {
     if ($uri_parts === FALSE) {
       throw new \InvalidArgumentException("The URI '$uri' is malformed.");
     }
-    // We support protocol-relative URLs.
-    if (strpos($uri, '//') === 0) {
-      $uri_parts['scheme'] = '';
-    }
-    elseif (empty($uri_parts['scheme'])) {
+    if (empty($uri_parts['scheme'])) {
       throw new \InvalidArgumentException("The URI '$uri' is invalid. You must use a valid URI scheme.");
     }
     $uri_parts += ['path' => ''];

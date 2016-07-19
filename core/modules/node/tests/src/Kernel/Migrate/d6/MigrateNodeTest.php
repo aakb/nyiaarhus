@@ -74,19 +74,12 @@ class MigrateNodeTest extends MigrateNodeTestBase {
     $this->assertIdentical('test rev 3', $node->body->value);
     $this->assertIdentical('filtered_html', $node->body->format);
 
-    // Test that a link field with an external link is migrated.
+    // Test that link fields are migrated.
     $this->assertIdentical('http://groups.drupal.org/', $node->field_test_link->uri);
     $this->assertIdentical('Drupal Groups', $node->field_test_link->title);
     $this->assertIdentical([], $node->field_test_link->options['attributes']);
 
-    // Test that a link field with an internal link is migrated.
-    $node = Node::load(9);
-    $this->assertSame('internal:/node/10', $node->field_test_link->uri);
-    $this->assertSame('Buy it now', $node->field_test_link->title);
-    $this->assertSame(['attributes' => ['target' => '_blank']], $node->field_test_link->options);
-
-    // Rerun migration with two source database changes.
-    // 1. Add an invalid link attributes and a different URL and
+    // Rerun migration with invalid link attributes and a different URL and
     // title. If only the attributes are changed the error does not occur.
     Database::getConnection('default', 'migrate')
       ->update('content_type_story')
@@ -99,26 +92,11 @@ class MigrateNodeTest extends MigrateNodeTestBase {
       ->condition('vid', '3')
       ->execute();
 
-    // 2. Add a leading slash to an internal link.
-    Database::getConnection('default', 'migrate')
-      ->update('content_type_story')
-      ->fields([
-        'field_test_link_url' => '/node/10',
-      ])
-      ->condition('nid', '9')
-      ->condition('vid', '12')
-      ->execute();
-
     $this->rerunMigration();
     $node = Node::load(2);
     $this->assertIdentical('https://www.drupal.org/node/2127611', $node->field_test_link->uri);
     $this->assertIdentical('Migrate API in Drupal 8', $node->field_test_link->title);
     $this->assertIdentical([], $node->field_test_link->options['attributes']);
-
-    $node = Node::load(9);
-    $this->assertSame('internal:/node/10', $node->field_test_link->uri);
-    $this->assertSame('Buy it now', $node->field_test_link->title);
-    $this->assertSame(['attributes' => ['target' => '_blank']], $node->field_test_link->options);
 
     // Test that we can re-import using the EntityContentBase destination.
     $title = $this->rerunMigration();

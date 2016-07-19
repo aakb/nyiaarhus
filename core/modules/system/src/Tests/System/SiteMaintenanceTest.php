@@ -36,7 +36,7 @@ class SiteMaintenanceTest extends WebTestBase {
   }
 
   /**
-   * Verifies site maintenance mode functionality.
+   * Verify site maintenance mode functionality.
    */
   protected function testSiteMaintenance() {
     $this->drupalGet(Url::fromRoute('user.page'));
@@ -129,22 +129,6 @@ class SiteMaintenanceTest extends WebTestBase {
     $this->drupalLogout();
     $this->drupalGet('');
     $this->assertEqual('Site under maintenance', $this->cssSelect('main h1')[0]);
-  }
-
-  /**
-   * Tests responses to non-HTML requests when in maintenance mode.
-   */
-  public function testNonHtmlRequest() {
-    $this->drupalLogout();
-    \Drupal::state()->set('system.maintenance_mode', TRUE);
-    $formats = ['json', 'xml', 'non-existing'];
-    foreach ($formats as $format) {
-      $this->pass('Testing format ' . $format);
-      $this->drupalGet('<front>', ['query' => ['_format' => $format]]);
-      $this->assertResponse(503);
-      $this->assertRaw('Drupal is currently under maintenance. We should be back shortly. Thank you for your patience.');
-      $this->assertHeader('Content-Type', 'text/plain; charset=UTF-8');
-    }
   }
 
 }

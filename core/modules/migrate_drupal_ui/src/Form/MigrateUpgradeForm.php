@@ -10,7 +10,7 @@ use Drupal\Core\State\StateInterface;
 use Drupal\Core\Url;
 use Drupal\migrate\Plugin\MigrationPluginManagerInterface;
 use Drupal\migrate_drupal_ui\MigrateUpgradeRunBatch;
-use Drupal\migrate_drupal\MigrationConfigurationTrait;
+use Drupal\migrate_drupal\MigrationCreationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -18,7 +18,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class MigrateUpgradeForm extends ConfirmFormBase {
 
-  use MigrationConfigurationTrait;
+  use MigrationCreationTrait;
 
   /**
    * Mapping of known migrations and their source and destination modules.

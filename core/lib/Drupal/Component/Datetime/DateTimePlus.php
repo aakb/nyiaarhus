@@ -455,7 +455,7 @@ class DateTimePlus {
   /**
    * Detects if there were errors in the processing of this date.
    *
-   * @return bool
+   * @return boolean
    *   TRUE if there were errors in the processing of this date, FALSE
    *   otherwise.
    */

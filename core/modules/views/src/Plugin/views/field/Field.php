@@ -472,28 +472,12 @@ class Field extends FieldPluginBase implements CacheableDependencyInterface, Mul
 
     // Get the settings form.
     $settings_form = array('#value' => array());
-    $format = isset($form_state->getUserInput()['options']['type']) ? $form_state->getUserInput()['options']['type'] : $this->options['type'];
-    if ($formatter = $this->getFormatterInstance($format)) {
+    if ($formatter = $this->getFormatterInstance()) {
       $settings_form = $formatter->settingsForm($form, $form_state);
       // Convert field UI selector states to work in the Views field form.
       FormHelper::rewriteStatesSelector($settings_form, "fields[{$field->getName()}][settings_edit_form]", 'options');
     }
     $form['settings'] = $settings_form;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitFormCalculateOptions(array $options, array $form_state_options) {
-    // When we change the formatter type we don't want to keep any of the
-    // previous configured formatter settings, as there might be schema
-    // conflict.
-    unset($options['settings']);
-    $options = $form_state_options + $options;
-    if (!isset($options['settings'])) {
-      $options['settings'] = [];
-    }
-    return $options;
   }
 
   /**
@@ -953,16 +937,13 @@ class Field extends FieldPluginBase implements CacheableDependencyInterface, Mul
    * @return \Drupal\Core\Field\FormatterInterface|null
    *   The field formatter instance.
    */
-  protected function getFormatterInstance($format = NULL) {
-    if (!isset($format)) {
-      $format = $this->options['type'];
-    }
-    $settings = $this->options['settings'] + $this->formatterPluginManager->getDefaultSettings($format);
+  protected function getFormatterInstance() {
+    $settings = $this->options['settings'] + $this->formatterPluginManager->getDefaultSettings($this->options['type']);
 
     $options = [
       'field_definition' => $this->getFieldDefinition(),
       'configuration' => [
-        'type' => $format,
+        'type' => $this->options['type'],
         'settings' => $settings,
         'label' => '',
         'weight' => 0,

@@ -20,11 +20,6 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
 interface TableMappingInterface {
 
   /**
-   * A property that represents delta used in entity query conditions.
-   */
-  const DELTA = '%delta';
-
-  /**
    * Gets a list of table names for this mapping.
    *
    * @return string[]

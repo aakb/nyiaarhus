@@ -820,16 +820,6 @@ class SqlContentEntityStorageSchemaTest extends UnitTestCase {
           'length' => 32,
           'not null' => FALSE,
         ),
-        'area' => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-        ),
-        'depth' => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-        ),
       ),
       'foreign keys' => array(
         'color' => array(
@@ -839,14 +829,8 @@ class SqlContentEntityStorageSchemaTest extends UnitTestCase {
           ),
         ),
       ),
-      'unique keys' => array(
-        'area' => array('area'),
-        'shape' => array(array('shape', 10)),
-      ),
-      'indexes' => array(
-        'depth' => array('depth'),
-        'color' => array(array('color', 3)),
-      ),
+      'unique keys' => array(),
+      'indexes' => array(),
     ));
 
     $field_storage = $this->storageDefinitions[$field_name];
@@ -921,27 +905,11 @@ class SqlContentEntityStorageSchemaTest extends UnitTestCase {
             'length' => 32,
             'not null' => FALSE,
           ),
-          $field_name . '_area' => array(
-            'type' => 'int',
-            'unsigned' => TRUE,
-            'not null' => TRUE,
-          ),
-          $field_name . '_depth' => array(
-            'type' => 'int',
-            'unsigned' => TRUE,
-            'not null' => TRUE,
-          ),
         ),
         'primary key' => array('entity_id', 'deleted', 'delta', 'langcode'),
         'indexes' => array(
           'bundle' => array('bundle'),
           'revision_id' => array('revision_id'),
-          $field_name . '_depth' => array($field_name . '_depth'),
-          $field_name . '_color' => array(array($field_name . '_color', 3)),
-        ),
-        'unique keys' => array(
-           $field_name . '_area' => array($field_name . '_area'),
-           $field_name . '_shape' => array(array($field_name . '_shape', 10)),
         ),
         'foreign keys' => array(
           $field_name . '_color' => array(

@@ -306,7 +306,7 @@ abstract class Entity implements EntityInterface {
       // The entity ID is needed as a route parameter.
       $uri_route_parameters[$this->getEntityTypeId()] = $this->id();
     }
-    if ($rel === 'revision' && $this instanceof RevisionableInterface) {
+    if ($rel === 'revision') {
       $uri_route_parameters[$this->getEntityTypeId() . '_revision'] = $this->getRevisionId();
     }
 
