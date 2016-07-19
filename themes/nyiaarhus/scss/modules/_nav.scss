@@ -46,6 +46,10 @@ $hamburger-menu-offset: 40px;
     padding-right: $hamburger-menu-offset + $spacing-desk;
   }
 
+  @include breakpoint($breakpoint-bigscreen) {
+    padding-right: 0;
+  }
+
   &--links {
     display: none; // Hiding navigation on smaller screens
 
