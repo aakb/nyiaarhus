@@ -7,11 +7,10 @@ _core:
 name: main_image
 label: 'Main Image (W: 1216)'
 effects:
-  b02ce3d8-5e82-4358-a000-dad79b75cf0b:
-    uuid: b02ce3d8-5e82-4358-a000-dad79b75cf0b
-    id: image_scale
-    weight: 1
+  30c6ef52-80ea-4990-87ac-556fd78f4ce5:
+    uuid: 30c6ef52-80ea-4990-87ac-556fd78f4ce5
+    id: image_scale_and_crop
+    weight: 2
     data:
-      width: 1216
-      height: null
-      upscale: false
+      width: 1920
+      height: 400
