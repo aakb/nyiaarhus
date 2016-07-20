@@ -22,9 +22,6 @@
   width: auto;
   z-index: z($z-index-elements, logo);
 
-  @include breakpoint($breakpoint-desk) {
-  }
-
   // If text instead of image.
   &--text {
     font-size: 1.5em;

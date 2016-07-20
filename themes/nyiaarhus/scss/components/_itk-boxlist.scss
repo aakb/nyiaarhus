@@ -18,7 +18,6 @@
   flex-flow: row wrap;
 
   @include breakpoint($breakpoint-tablet) {
-    margin-left: 0;
     margin-right: 0;
   }
 
