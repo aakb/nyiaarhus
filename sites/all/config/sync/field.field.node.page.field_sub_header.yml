@@ -1,0 +1,19 @@
+uuid: 488fa02c-84dc-4283-84be-d34d5d7ba73b
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_header
+    - node.type.page
+id: node.page.field_sub_header
+field_name: field_sub_header
+entity_type: node
+bundle: page
+label: 'Sub header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

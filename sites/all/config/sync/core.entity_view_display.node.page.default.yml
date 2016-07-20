@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.page.field_paragraphs
     - field.field.node.page.field_related_page_image
     - field.field.node.page.field_related_page_teaser
+    - field.field.node.page.field_sub_header
     - image.style.main_image
     - node.type.page
   module:
@@ -27,11 +28,11 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
   field_lead:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -61,6 +62,13 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+  field_sub_header:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
 hidden:
   field_related_page_image: true
   field_related_page_teaser: true
