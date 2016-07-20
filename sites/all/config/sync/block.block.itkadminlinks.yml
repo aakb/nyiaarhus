@@ -1,0 +1,20 @@
+uuid: 76d00faf-9fba-4dbc-b365-f0a03e5636a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - itk_admin_links
+  theme:
+    - nyiaarhus
+id: itkadminlinks
+theme: nyiaarhus
+region: content
+weight: -2
+provider: null
+plugin: itk_admin_links
+settings:
+  id: itk_admin_links
+  label: 'ITK Admin links'
+  provider: itk_admin_links
+  label_display: visible
+visibility: {  }

@@ -3,4 +3,3 @@ settings.local.php
 services.local.yml
 sites/sites.php
 sites/*/files
-sites/all/config/sync
