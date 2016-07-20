@@ -34,6 +34,61 @@
   flex: 1 0 auto;
   min-height: 80%;
 
+  &--header-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+
+    @include breakpoint($breakpoint-tablet) {
+      min-height: 320px;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      min-height: 420px;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      min-height: 520px;
+    }
+  }
+
+  &--image-wrapper {
+    background-size: cover;
+    bottom: 0;
+    color: $white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &:before {
+      @extend %image-overlay;
+
+      background-color: rgba(0, 0, 0, .5);
+    }
+  }
+
+  &--header,
+  &--lead {
+    color: $white;
+    margin-left: auto;
+    margin-right: auto;
+    width: $layout-max-width-desk;
+    z-index: z($z-index-elements, header);
+  }
+
+  &--header {
+    font-size: 3.5em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &--lead {
+    margin-bottom: 20px;
+  }
+
   &--inner {
     @include word-wrap;
 
@@ -83,65 +138,11 @@
     }
   }
 
-  h3,
-  h4,
-  &--header,
-  &--lead {
-    font-weight: 800;
-  }
-
-  &--header,
-  &--meta,
-  &--lead {
-    text-align: center;
-  }
-
-  &--header {
-    font-size: 2.5em;
-    margin-left: -.075em; /* Compensate for font whitespace */
-    margin-right: 0;
-    margin-top: .5em;
-    text-transform: uppercase;
-  }
-
   &--meta {
     font-weight: 300;
     margin-bottom: 1em;
     margin-top: -.5em;
     padding-bottom: 1em;
-  }
-
-  &--image-wrapper {
-    position: relative;
-
-    @include breakpoint($breakpoint-desk) {
-      height: 500px;
-      overflow: hidden;
-    }
-
-    @include breakpoint($breakpoint-bigscreen) {
-      img {
-        margin-top: -225px;
-      }
-    }
-
-    &:before {
-      @extend %image-overlay;
-    }
-  }
-
-  &--lead {
-    font-size: 1.25em;
-    margin-bottom: 1em;
-
-    @include breakpoint($breakpoint-tablet) {
-      margin-left: 3em;
-      margin-right: 3em;
-    }
-
-    @include breakpoint($breakpoint-desk) {
-      font-size: 1.5em;
-    }
   }
 
   &--text + fieldset {
