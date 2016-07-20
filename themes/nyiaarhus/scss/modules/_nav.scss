@@ -29,25 +29,14 @@ $hamburger-menu-offset: 40px;
   }
 }
 
-.nav,
-.nav.is-sticky,
-.is-frontpage .nav.is-sticky {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $layout-max-width-desk;
+.nav {
   transition: top .35s, right .35s, padding .35s;
 
   @include breakpoint($breakpoint-desk) {
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
     max-width: $layout-max-width-desk;
-  }
-
-  @include breakpoint($breakpoint-desk) {
-    padding-right: $hamburger-menu-offset + $spacing-desk;
-  }
-
-  @include breakpoint($breakpoint-bigscreen) {
-    padding-right: 0;
   }
 
   &--links {
@@ -60,11 +49,15 @@ $hamburger-menu-offset: 40px;
       flex-grow: 1;
       font-weight: 300;
       justify-content: flex-end;
-      text-align: right;
+      padding-right: $hamburger-menu-offset + $spacing-desk-large;
 
       a {
         @include strip-link-styles($white, none);
       }
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      padding-right: 0;
     }
   }
 
@@ -89,7 +82,7 @@ $hamburger-menu-offset: 40px;
       }
 
       &:hover {
-        background-color: rgb(112, 112, 112);
+        background-color: transparentize($theme-color, .75);
 
         @include strip-link-styles($white, none);
       }

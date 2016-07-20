@@ -23,7 +23,6 @@
   z-index: z($z-index-elements, logo);
 
   @include breakpoint($breakpoint-desk) {
-    margin-left: 0;
   }
 
   // If text instead of image.
