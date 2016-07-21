@@ -22,7 +22,7 @@ function itkore_base_preprocess_page(&$variables) {
       $file = ($top_image_id) ? File::load($top_image_id) : FALSE;
       $variables['default_image'] = ($file) ? $file->url() : '/' . drupal_get_path('module', 'itkore_admin') . '/images/header-default.jpg';
 
-      if (isset($variables['node'])) {
+      if (isset($variables['node']) && isset($variables['content']['field_main_image'])) {
         $main_image = $variables['node']->get('field_main_image')->getValue();
         if (empty($main_image)) {
           $variables['node_no_image'] = TRUE;
