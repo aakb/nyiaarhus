@@ -85,15 +85,7 @@
   </nav>
 </div>
 <main role="main" class="content">
-  {% if node_no_image %}
-    <figure class="content--image-wrapper">
-      <img src="{{ default_image }}">
-    </figure>
-  {% endif %}
   {{ page.content }}
 </main>
 
 {% include '@itkore_base/layout/_footer.html.twig' %}
-
-{# Tabs positioned fixed. #}
-{{ tabs }}

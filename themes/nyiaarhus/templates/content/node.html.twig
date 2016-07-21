@@ -69,7 +69,11 @@
 #}
 
 <div class="content--header-wrapper">
-  {{ content.field_main_image }}
+  {% if node_no_image %}
+    <div class="content--image-wrapper" style="background-image: url('{{ default_image }}')"></div>
+  {% else %}
+    {{ content.field_main_image }}
+  {% endif %}
   <div class="content--header-inner-wrapper">
     <h1 class="content--header">{{ label }}</h1>
     {{ content.field_sub_header }}
