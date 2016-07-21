@@ -1,0 +1,30 @@
+uuid: fee990f3-d55f-438d-9b14-86d214d0e44c
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_google_inside_link
+    - node.type.google_inside_page
+    - node.type.overview_page
+    - node.type.page
+id: node.google_inside_page.field_google_inside_link
+field_name: field_google_inside_link
+entity_type: node
+bundle: google_inside_page
+label: Link
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      overview_page: overview_page
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: overview_page
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 1e146998-3f78-4af4-ab59-38e8532078ed
+langcode: da
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.google_inside_page.field_google_inside_embed_code
+    - field.field.node.google_inside_page.field_google_inside_link
+    - node.type.google_inside_page
+  module:
+    - user
+id: node.google_inside_page.teaser
+targetEntityType: node
+bundle: google_inside_page
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_google_inside_embed_code: true
+  field_google_inside_link: true
+  langcode: true

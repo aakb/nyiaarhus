@@ -1,0 +1,31 @@
+uuid: 0e44e71d-4b66-4f3d-8f01-b4c1b878c183
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.node.google_inside_page.field_google_inside_embed_code
+    - field.field.node.google_inside_page.field_google_inside_link
+    - node.type.google_inside_page
+  module:
+    - user
+id: node.google_inside_page.default
+targetEntityType: node
+bundle: google_inside_page
+mode: default
+content:
+  field_google_inside_embed_code:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_google_inside_link:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+hidden:
+  langcode: true
+  links: true
