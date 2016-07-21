@@ -11,15 +11,16 @@ label: Pages
 type: 'canonical_entities:node'
 pattern: '[node:menu-link:parent]/[node:title]'
 selection_criteria:
-  ca5277fc-df87-4150-8b88-d16a5384c924:
+  5736d4c3-c49f-428f-bae8-9079218744d0:
     id: node_type
     bundles:
+      google_inside_page: google_inside_page
       overview_page: overview_page
       page: page
     negate: false
     context_mapping:
       node: node
-    uuid: ca5277fc-df87-4150-8b88-d16a5384c924
+    uuid: 5736d4c3-c49f-428f-bae8-9079218744d0
 selection_logic: and
 weight: -5
 relationships: {  }
