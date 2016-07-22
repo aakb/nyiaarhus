@@ -15,7 +15,7 @@ entity_type: paragraph
 bundle: itk_internal_link
 label: File
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

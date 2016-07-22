@@ -11,10 +11,42 @@ dependencies:
     - image.style.thumbnail
     - paragraphs.paragraphs_type.itk_internal_link
   module:
+    - field_group
     - file
     - image
     - imce
     - text
+third_party_settings:
+  field_group:
+    group_paragraphs_content:
+      children:
+        - field_title
+        - field_image
+        - field_text
+      parent_name: ''
+      weight: 0
+      label: 'Base content'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_paragraphs_assets:
+      children:
+        - field_file
+        - field_link_text
+      parent_name: ''
+      weight: 1
+      label: 'File and link'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
 _core:
   default_config_hash: x8KG1HP96_CZl-eX0YoaP3kecHPBSzXUeyVd2kXfuvU
 id: paragraph.itk_internal_link.default
@@ -23,7 +55,7 @@ bundle: itk_internal_link
 mode: default
 content:
   field_file:
-    weight: 3
+    weight: 6
     settings:
       progress_indicator: throbber
     third_party_settings:
@@ -31,7 +63,7 @@ content:
         enabled: true
     type: file_generic
   field_image:
-    weight: 0
+    weight: 3
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
@@ -40,21 +72,21 @@ content:
         enabled: true
     type: image_image
   field_link_text:
-    weight: 4
+    weight: 7
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_text:
-    weight: 2
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
   field_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
