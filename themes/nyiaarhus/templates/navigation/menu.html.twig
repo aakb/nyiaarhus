@@ -30,7 +30,7 @@
   {% import _self as menus %}
     {% if items %}
       {% for item in items %}
-        {% set classes = [item.in_active_trail ? 'is-active', item.is_expanded ? 'is-expanded'] %}
+        {% set classes = ['nav--link', item.in_active_trail ? 'is-active'] %}
         {% if hamburger_menu == true %}
           {% if menu_level == 0 %}
             <div class="hamburger-menu--group{% if item.in_active_trail %} is-active {% endif %}">
@@ -38,7 +38,7 @@
             {% if menu_level == 1 %}
               <div class="hamburger-menu--sub-group{% if item.in_active_trail %} is-active {% endif %}">
             {% endif %}
-            {{ link(item.title, item.url, attributes, {'class' : classes}) }}
+            {{ link(item.title, item.url, attributes) }}
             {{ menus.menu_links(item.below, {'class' : 'hamburger-menu--link is-sub'}, menu_level + 1, hamburger_menu) }}
             {% if menu_level == 1 %}
               </div>
@@ -47,7 +47,7 @@
             </div>
           {% endif %}
         {% else %}
-          {{ link(item.title, item.url, attributes) }}
+          {{ link(item.title, item.url, {'class' : classes}) }}
           {{ menus.menu_links(item.below, {'class' : 'nav--link is-sub'}, menu_level + 1, hamburger_menu) }}
         {% endif %}
       {% endfor %}
