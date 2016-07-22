@@ -9,9 +9,9 @@ _core:
 id: pages
 label: Pages
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parent]/[node:title]'
+pattern: '[node:menu-link:parent:url:path]/[node:title]'
 selection_criteria:
-  5736d4c3-c49f-428f-bae8-9079218744d0:
+  99d2535b-f05f-401a-a6d1-7eeaf075b90e:
     id: node_type
     bundles:
       google_inside_page: google_inside_page
@@ -20,7 +20,7 @@ selection_criteria:
     negate: false
     context_mapping:
       node: node
-    uuid: 5736d4c3-c49f-428f-bae8-9079218744d0
+    uuid: 99d2535b-f05f-401a-a6d1-7eeaf075b90e
 selection_logic: and
 weight: -5
 relationships: {  }
