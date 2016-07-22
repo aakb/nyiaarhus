@@ -9,7 +9,7 @@
 ================================================================================================================== */
 
 // Set widths
-$image-width-lap: 22.5%;
+$image-width-lap: 35%;
 $image-gutter-lap: 2.5%;
 
 $image-width-desk: 33%;
@@ -39,14 +39,17 @@ $internal-link-image-width: 112px;
   &--youtube,
   &--iframe,
   &--title-only {
+    @include layout-spacing;
+
     margin-bottom: $paragraph-margin-top;
     margin-top: $paragraph-margin-top;
   }
 
   // Paragraph Title
   &--title {
-    font-weight: bold;
+    font-weight: 800;
     margin-bottom: .5em;
+    text-transform: uppercase;
   }
 
   // Text Left
@@ -57,7 +60,6 @@ $internal-link-image-width: 112px;
   }
 
   &--text-left {
-
     figure {
       flex-basis: 5em;
       flex-grow: 1;
