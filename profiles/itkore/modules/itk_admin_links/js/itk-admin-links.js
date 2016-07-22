@@ -16,4 +16,12 @@
     // Toggle overlay.
     overlay.toggleClass('is-visible');
   });
+
+  $(overlay).click(function() {
+    admin_menu.removeClass('is-open');
+    toggle_button.removeClass('is-open');
+
+    // Toggle overlay.
+    overlay.removeClass('is-visible');
+  });
 })(jQuery);
