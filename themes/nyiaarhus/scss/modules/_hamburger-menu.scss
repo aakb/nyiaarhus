@@ -55,18 +55,20 @@
       @include strip-link-styles($gray-darkest, none);
 
       font-weight: 800;
+      text-transform: uppercase;
 
       &:hover {
         color: $theme-color;
       }
 
-      &:not(.is-sub) {
-        text-transform: uppercase;
-      }
-
       &.is-sub {
         display: block;
         font-weight: 300;
+        text-transform: none;
+      }
+
+      &.is-sub.is-active {
+        font-weight: 600;
       }
     }
   }
@@ -75,18 +77,36 @@
     margin-bottom: .75em;
     padding-bottom: .75em;
 
+    > a:first-child {
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
     &:not(:last-child) {
       border-bottom: 1px dashed $gray-light;
     }
   }
 
+  &--sub-group {
+    &.is-active {
+      background-color: $gray-lightest;
+      margin-bottom: .75em;
+      margin-top: .5em;
+      padding-bottom: .75em;
+      padding-top: .75em;
+
+      a:first-child {
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+    }
+  }
+
   // Nesting since we use the same template.
-  & .nav--link {
-    color: $gray-darker;
-    display: list-item;
+  .nav--link {
+    color: $gray-darkest;
+    display: block;
     font-size: 1.2em;
-    list-style: none;
-    margin-bottom: .25em;
     text-decoration: none;
 
     &.is-active {

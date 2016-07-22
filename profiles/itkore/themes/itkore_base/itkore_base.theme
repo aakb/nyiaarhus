@@ -99,6 +99,7 @@ function itkore_base_preprocess_menu(&$variables) {
   // check for expanded (Main nav does not have any children and neither item
   // is expanded). This won't work if for some reason none of the menu items
   // have any children,
+
   foreach ($variables['items'] as $item) {
     if($item['is_expanded'] == TRUE) {
       $variables['hamburger_menu'] = TRUE;
