@@ -53,6 +53,7 @@ module:
   youtube: 0
   menu_link_content: 1
   pathauto: 1
+  content_translation: 10
   views: 10
   itkore: 1000
 theme:
@@ -64,3 +65,4 @@ theme:
   nyiaarhus: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
+langcode: da

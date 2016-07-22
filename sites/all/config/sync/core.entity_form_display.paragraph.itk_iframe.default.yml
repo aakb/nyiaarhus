@@ -1,5 +1,5 @@
 uuid: 8900ce0f-7657-4251-b6bb-85256355e84e
-langcode: en
+langcode: da
 status: true
 dependencies:
   config:
