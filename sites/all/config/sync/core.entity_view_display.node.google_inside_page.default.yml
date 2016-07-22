@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.google_inside_page.field_google_inside_embed_code
     - field.field.node.google_inside_page.field_google_inside_link
+    - field.field.node.google_inside_page.field_related_page_image
+    - field.field.node.google_inside_page.field_related_page_teaser
     - node.type.google_inside_page
   module:
     - user
@@ -27,5 +29,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
 hidden:
+  field_related_page_image: true
+  field_related_page_teaser: true
   langcode: true
   links: true

@@ -5,9 +5,13 @@ dependencies:
   config:
     - field.field.node.google_inside_page.field_google_inside_embed_code
     - field.field.node.google_inside_page.field_google_inside_link
+    - field.field.node.google_inside_page.field_related_page_image
+    - field.field.node.google_inside_page.field_related_page_teaser
+    - image.style.thumbnail
     - node.type.google_inside_page
   module:
     - field_group
+    - image
     - path
 third_party_settings:
   field_group:
@@ -40,6 +44,20 @@ third_party_settings:
         required_fields: true
         id: ''
         classes: ''
+    group_teaser_display:
+      children:
+        - field_related_page_teaser
+        - field_related_page_image
+      parent_name: ''
+      weight: 2
+      label: 'Teaser display'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
 id: node.google_inside_page.default
 targetEntityType: node
 bundle: google_inside_page
@@ -65,6 +83,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+  field_related_page_image:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_related_page_teaser:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   langcode:
     type: language_select
     weight: 3

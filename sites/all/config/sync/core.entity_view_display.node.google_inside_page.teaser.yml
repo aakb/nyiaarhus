@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.google_inside_page.field_google_inside_embed_code
     - field.field.node.google_inside_page.field_google_inside_link
+    - field.field.node.google_inside_page.field_related_page_image
+    - field.field.node.google_inside_page.field_related_page_teaser
     - node.type.google_inside_page
   module:
     - user
@@ -19,4 +21,6 @@ content:
 hidden:
   field_google_inside_embed_code: true
   field_google_inside_link: true
+  field_related_page_image: true
+  field_related_page_teaser: true
   langcode: true
