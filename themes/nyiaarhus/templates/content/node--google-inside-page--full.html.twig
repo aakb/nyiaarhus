@@ -73,8 +73,8 @@
     <h1 class="google-inside--header">{{ label }}</h1>
     <div class="google-inside--link-wrapper">
       {{ content.field_google_inside_link }}
-      {{ content.field_google_inside_link }}
+      {{ content.field_google_inside_related_page }}
     </div>
-    {{ content|without('comment', 'links', 'field_google_inside_link') }}
+    {{ content|without('comment', 'links', 'field_google_inside_link', 'field_google_inside_related_page') }}
   </div>
 </div>

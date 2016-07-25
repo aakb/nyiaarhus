@@ -57,13 +57,13 @@
     z-index: z($z-index-elements, google-inside-content);
   }
 
-  &--embed {
+  &--embed-link {
     border: 0;
     bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
-    z-index: z($z-index-elements, google-inside-embed);
+    z-index: z($z-index-elements, google-inside-embed-link);
   }
 }
