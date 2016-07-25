@@ -3,8 +3,9 @@ langcode: da
 status: true
 dependencies:
   config:
-    - field.field.node.google_inside_page.field_google_inside_embed_code
+    - field.field.node.google_inside_page.field_google_inside_embed_link
     - field.field.node.google_inside_page.field_google_inside_link
+    - field.field.node.google_inside_page.field_google_inside_related_page
     - field.field.node.google_inside_page.field_related_page_image
     - field.field.node.google_inside_page.field_related_page_teaser
     - node.type.google_inside_page
@@ -15,15 +16,23 @@ targetEntityType: node
 bundle: google_inside_page
 mode: default
 content:
-  field_google_inside_embed_code:
-    weight: 0
-    label: hidden
-    settings: {  }
+  field_google_inside_embed_link:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: basic_string
+    type: string
   field_google_inside_link:
     weight: 1
     label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_google_inside_related_page:
+    weight: 4
+    label: above
     settings:
       link: true
     third_party_settings: {  }

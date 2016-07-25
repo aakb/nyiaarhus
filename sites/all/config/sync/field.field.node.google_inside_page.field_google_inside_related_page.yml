@@ -1,0 +1,27 @@
+uuid: 42f0025b-b8a0-4da3-aaeb-90d787fdda5f
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_google_inside_related_page
+    - node.type.google_inside_page
+id: node.google_inside_page.field_google_inside_related_page
+field_name: field_google_inside_related_page
+entity_type: node
+bundle: google_inside_page
+label: 'Related page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      google_inside_page: google_inside_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

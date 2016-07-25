@@ -1,15 +1,15 @@
-uuid: ae6820c1-e37d-4c9b-b38b-09607f919412
+uuid: 2f2b3f7d-a03e-4ca7-8e96-34e1d6989ea1
 langcode: da
 status: true
 dependencies:
   module:
     - node
-id: node.field_google_inside_embed_code
-field_name: field_google_inside_embed_code
+id: node.field_google_inside_related_page
+field_name: field_google_inside_related_page
 entity_type: node
-type: string_long
+type: entity_reference
 settings:
-  case_sensitive: false
+  target_type: node
 module: core
 locked: false
 cardinality: 1

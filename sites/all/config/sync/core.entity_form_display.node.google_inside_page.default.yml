@@ -3,8 +3,9 @@ langcode: da
 status: true
 dependencies:
   config:
-    - field.field.node.google_inside_page.field_google_inside_embed_code
+    - field.field.node.google_inside_page.field_google_inside_embed_link
     - field.field.node.google_inside_page.field_google_inside_link
+    - field.field.node.google_inside_page.field_google_inside_related_page
     - field.field.node.google_inside_page.field_related_page_image
     - field.field.node.google_inside_page.field_related_page_teaser
     - image.style.thumbnail
@@ -19,8 +20,9 @@ third_party_settings:
     group_base_content:
       children:
         - title
+        - field_google_inside_embed_link
         - field_google_inside_link
-        - field_google_inside_embed_code
+        - field_google_inside_related_page
       parent_name: ''
       weight: 0
       label: 'Base content'
@@ -56,15 +58,23 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
-  field_google_inside_embed_code:
-    weight: 3
+  field_google_inside_embed_link:
+    weight: 2
     settings:
-      rows: 5
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: string_textfield
   field_google_inside_link:
-    weight: 2
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_google_inside_related_page:
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
