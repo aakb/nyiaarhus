@@ -34,7 +34,7 @@
     display: block;
     height: 3.5em;
     position: fixed;
-    right: 3.5em;
+    right: 2.5em;
 
     transition: transform .4s;
     transition-timing-function: ease-in-out;
@@ -55,7 +55,7 @@
     margin: 0;
     padding: 0;
     position: fixed;
-    right: 8em;
+    right: 7em;
     transition: bottom .25s;
     transition-timing-function: ease-in-out;
     z-index: z($z-index-elements, admin-links);
