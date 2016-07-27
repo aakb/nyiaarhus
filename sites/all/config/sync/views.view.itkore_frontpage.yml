@@ -3,7 +3,7 @@ langcode: da
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.related_pages
+    - core.entity_view_mode.node.promoted_to_frontpage
     - node.type.google_inside_page
     - node.type.news
     - node.type.overview_page
@@ -179,7 +179,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: related_pages
+          view_mode: promoted_to_frontpage
       sorts:
         created:
           id: created

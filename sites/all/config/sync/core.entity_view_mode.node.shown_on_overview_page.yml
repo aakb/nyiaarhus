@@ -1,0 +1,10 @@
+uuid: 8b77cc78-5acc-4cca-9a34-d83263af8b34
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+id: node.shown_on_overview_page
+label: 'Shown on overview page'
+targetEntityType: node
+cache: true

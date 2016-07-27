@@ -1,11 +1,12 @@
 uuid: 01a37db8-f05d-4e22-a4bd-1be55e1b9b2c
 langcode: da
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.related_pages
     - field.field.node.google_inside_page.field_google_inside_embed_link
     - field.field.node.google_inside_page.field_google_inside_link
+    - field.field.node.google_inside_page.field_google_inside_related_page
     - field.field.node.google_inside_page.field_related_page_image
     - field.field.node.google_inside_page.field_related_page_teaser
     - image.style.related_page_image
@@ -36,5 +37,6 @@ content:
 hidden:
   field_google_inside_embed_link: true
   field_google_inside_link: true
+  field_google_inside_related_page: true
   langcode: true
   links: true

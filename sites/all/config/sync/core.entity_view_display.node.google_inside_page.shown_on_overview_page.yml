@@ -1,9 +1,9 @@
-uuid: 1e146998-3f78-4af4-ab59-38e8532078ed
+uuid: d9756d85-57a6-448b-b4c3-20b9d6143fb5
 langcode: da
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.shown_on_overview_page
     - field.field.node.google_inside_page.field_google_inside_embed_link
     - field.field.node.google_inside_page.field_google_inside_link
     - field.field.node.google_inside_page.field_google_inside_related_page
@@ -14,10 +14,10 @@ dependencies:
   module:
     - image
     - user
-id: node.google_inside_page.teaser
+id: node.google_inside_page.shown_on_overview_page
 targetEntityType: node
 bundle: google_inside_page
-mode: teaser
+mode: shown_on_overview_page
 content:
   field_related_page_image:
     type: image

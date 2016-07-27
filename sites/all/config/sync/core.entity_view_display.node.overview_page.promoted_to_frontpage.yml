@@ -1,9 +1,9 @@
-uuid: 9d2011e1-068c-4bcf-9204-7f16a468f262
+uuid: 7b274f26-7b09-4804-bf65-f9d578a0b3fb
 langcode: da
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.related_pages
+    - core.entity_view_mode.node.promoted_to_frontpage
     - field.field.node.overview_page.body
     - field.field.node.overview_page.field_lead
     - field.field.node.overview_page.field_main_image
@@ -18,11 +18,11 @@ dependencies:
     - image
     - user
 _core:
-  default_config_hash: TgSsyPukkTDCmqhP8nzlGRU_DSpsK05xEnKk4Vi4kRo
-id: node.overview_page.related_pages
+  default_config_hash: 5IJiB-EPyk4JYEYsp8crArFekmdKqgGMEPS-nfo375I
+id: node.overview_page.promoted_to_frontpage
 targetEntityType: node
 bundle: overview_page
-mode: related_pages
+mode: promoted_to_frontpage
 content:
   field_related_page_image:
     type: image
