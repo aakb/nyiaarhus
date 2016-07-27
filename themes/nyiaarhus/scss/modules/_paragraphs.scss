@@ -34,10 +34,14 @@ $internal-link-image-width: 112px;
   &--youtube,
   &--iframe,
   &--title-only {
-    @include layout-spacing(true, true, false, true);
+    @include layout-spacing;
 
     margin-bottom: $paragraph-margin-top;
     margin-top: $paragraph-margin-top;
+
+    @include breakpoint($breakpoint-bigscreen) {
+      margin-right: 0;
+    }
   }
 
   // Paragraph Title
