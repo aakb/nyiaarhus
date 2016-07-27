@@ -28,18 +28,13 @@ $internal-link-image-width: 112px;
 }
 
 .paragraphs {
-  &--wrapper {
-    margin-left: 1.8em;
-    margin-right: 1.8em;
-  }
-
   &--text-left,
   &--internal-link,
   &--title-paragraph,
   &--youtube,
   &--iframe,
   &--title-only {
-    @include layout-spacing;
+    @include layout-spacing(true, true, false, true);
 
     margin-bottom: $paragraph-margin-top;
     margin-top: $paragraph-margin-top;
