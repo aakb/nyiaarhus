@@ -57,9 +57,9 @@
     margin-bottom: 150px;
 
     @include breakpoint($breakpoint-desk) {
+      margin-bottom: 300px;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 300px;
       max-width: $layout-max-width-desk;
     }
   }
