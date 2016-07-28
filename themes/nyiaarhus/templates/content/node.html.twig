@@ -80,5 +80,8 @@
   </div>
 </div>
 <div class="content--inner">
-  {{ content|without('field_main_image', 'field_sub_header', 'comment', 'links') }}
+  <div class="content--lead">
+    {{ content.field_lead }}
+  </div>
+  {{ content|without('field_main_image', 'field_sub_header', 'field_lead', 'comment', 'links') }}
 </div>

@@ -1,6 +1,6 @@
 /**
  *
- * ITK box list
+ * ITK box list gallery
  *
  * A component for content boxes
  *
@@ -10,7 +10,6 @@
 /* Styles
    ========================================================================== */
 
-// Gallery display ( Frontpage promoted)
 .itk-boxlist-gallery {
   @include layout-spacing(false, true, true, false);
 
@@ -96,7 +95,6 @@
     }
   }
 
-  // Absolutely positioned from bottom.
   &--link {
     @include layout-spacing;
 

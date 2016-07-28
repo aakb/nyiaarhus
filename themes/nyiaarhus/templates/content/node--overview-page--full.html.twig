@@ -68,24 +68,21 @@
  */
 #}
 
-<article class="itk-boxlist-presentation--item">
-  <div class="itk-boxlist-presentation--header-wrapper">
-    {% if node_no_image %}
-      <div class="itk-boxlist-presentation--image-wrapper" style="background-image: url('{{ default_image }}')"></div>
-    {% else %}
-      {{ content.field_main_image }}
-    {% endif %}
-    <div class="itk-boxlist-presentation--header-inner-wrapper">
-      <h1 class="itk-boxlist-presentation--header">{{ label }}</h1>
-      {{ content.field_sub_header }}
-    </div>
+<div class="content--header-wrapper">
+  {% if node_no_image %}
+    <div class="content--image-wrapper" style="background-image: url('{{ default_image }}')"></div>
+  {% else %}
+    {{ content.field_main_image }}
+  {% endif %}
+  <div class="content--header-inner-wrapper">
+    <h1 class="content--header">{{ label }}</h1>
+    {{ content.field_sub_header }}
   </div>
-  <div class="itk-boxlist-presentation--inner-wrapper">
-    <div class="itk-boxlist-presentation--lead">
-      {{ content.field_lead }}
-    </div>
-    <div class="itk-boxlist-presentation--content">
-      {{ content.body }}
-    </div>
+</div>
+<div class="content--inner">
+  <div class="content--lead">
+    {{ content.field_lead }}
   </div>
-</article>
+  {{ content|without('field_main_image', 'field_sub_header', 'field_lead', 'comment', 'links', 'field_pages') }}
+</div>
+{{ content.field_pages }}
