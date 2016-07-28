@@ -18,7 +18,7 @@ mode: default
 content:
   field_google_inside_embed_link:
     weight: 3
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -32,7 +32,7 @@ content:
     type: entity_reference_label
   field_google_inside_related_page:
     weight: 4
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_pages
-    - node.type.google_inside_page
     - node.type.news
     - node.type.overview_page
     - node.type.page
@@ -24,7 +23,6 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      google_inside_page: google_inside_page
       news: news
       overview_page: overview_page
       page: page
