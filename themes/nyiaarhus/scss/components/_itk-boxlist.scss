@@ -63,7 +63,7 @@
     flex: 0 0 auto;
     font-size: 1.1em;
     font-weight: 800;
-    margin-bottom: 0; /* Override base styling */
+    margin-bottom: -15px; /* Override base styling and compensate for line height */
     text-transform: uppercase;
 
     a {
@@ -75,20 +75,12 @@
     }
   }
 
-  // Class name created from image style.
-  .related-page-image {
-    align-self: center;
-    display: block;
-    flex: 0 0 auto;
-    order: 1;
-    width: 100%;
-  }
-
   &--content {
     @include layout-spacing(false, true , true, true);
 
     height: 4.5em;
     line-height: 1.5em;
+    margin-bottom: -10px; /* Compensate for line height */
     overflow: hidden;
     position: relative;
 
@@ -113,65 +105,5 @@
     display: block;
     line-height: 1.4em;
     padding-left: 1.75em;
-  }
-}
-
-
-
-// Boxlist display (Frontpage news/Content node references)
-.itk-boxlist {
-  display: flex;
-  flex-flow: row wrap;
-  margin: $layout-padding;  // We have the boxlist set the side margins
-
-  &--item {
-    border-top: 1px solid $gray-lighter;
-    display: flex;
-    flex: 0 0 100%;
-    flex-flow: row nowrap;
-    margin-bottom: $layout-padding;
-    padding-top: $layout-padding;
-
-    @include breakpoint($breakpoint-desk) {
-      border: 1px solid $gray-lighter;
-      padding-top: 0;
-    }
-  }
-
-  // Class name created from image style.
-  .related-page-image,
-  .news-teaser-image {
-    flex: 0 0 72px;
-    height: 72px; /* Static height to ensure a quadratic container */
-
-    @include breakpoint($breakpoint-tablet) {
-      flex: 0 0 150px;
-      height: 150px;
-    }
-
-    @include breakpoint($breakpoint-desk) {
-      flex: 0 0 224px;
-      height: 224px;
-      padding-top: 0;
-    }
-  }
-
-  &--content {
-    box-sizing: border-box;
-    flex: 1 1 auto;
-  }
-
-  &--meta {
-    color: $gray-light;
-    margin-bottom: .75em;
-  }
-
-  &--link {
-    display: inline-block; /* Best way to break inherited flex. */
-    margin-top: .75em;
-  }
-
-  .button {
-    width: 200px; /* Same as other butttons/links on frontpage */
   }
 }
