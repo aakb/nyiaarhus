@@ -99,9 +99,22 @@
   }
 
   &--text {
+    h2,
+    h3,
+    h4 {
+      font-weight: 600;
+      margin-top: 2em;
+    }
+
+    h2 {
+      font-size: 1.25em;
+    }
+
+    h3 {
+      font-size: 1.1em;
+    }
   }
 
-  p + h3,
   p + p {
     margin-top: 2em;
   }
