@@ -54,13 +54,21 @@
   }
 
   &--inner-wrapper {
-    margin-bottom: 150px;
+    margin-bottom: $spacing-lap-large;
+
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: $spacing-tablet-large;
+    }
 
     @include breakpoint($breakpoint-desk) {
-      margin-bottom: 300px;
+      margin-bottom: $spacing-desk-large;
       margin-left: auto;
       margin-right: auto;
       max-width: $layout-max-width-desk;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: $spacing-bigscreen-large;
     }
   }
 
