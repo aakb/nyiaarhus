@@ -1,10 +1,9 @@
-uuid: 76d00faf-9fba-4dbc-b365-f0a03e5636a7
-langcode: en
+uuid: e64f4d25-ccab-48ec-b3e7-9b43d81a7a8b
+langcode: da
 status: true
 dependencies:
   module:
     - itk_admin_links
-    - user
   theme:
     - nyiaarhus
 id: itkadminlinks
@@ -18,11 +17,4 @@ settings:
   label: 'ITK Admin links'
   provider: itk_admin_links
   label_display: visible
-visibility:
-  user_role:
-    id: user_role
-    roles:
-      editor: editor
-    negate: false
-    context_mapping:
-      user: '@user.current_user_context:current_user'
+visibility: {  }
