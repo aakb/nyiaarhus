@@ -46,6 +46,8 @@ $internal-link-image-width: 112px;
 
   // Paragraph Title
   &--title {
+    @include strip-link-styles();
+
     font-weight: 800;
     margin-bottom: .5em;
     text-transform: uppercase;
@@ -114,10 +116,6 @@ $internal-link-image-width: 112px;
         max-width: $internal-link-image-width;
         min-width: $internal-link-image-width;
       }
-    }
-
-    a:first-child {
-      @include strip-link-styles();
     }
 
     .paragraphs--text > p:last-child {
