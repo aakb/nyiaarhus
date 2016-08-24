@@ -70,11 +70,13 @@
 
 <article class="itk-boxlist-presentation--item">
   <div class="itk-boxlist-presentation--header-wrapper">
+    <a href="{{ url }}" title="{{ label }}">
     {% if node_no_image %}
       <div class="itk-boxlist-presentation--image-wrapper" style="background-image: url('{{ default_image }}')"></div>
     {% else %}
       {{ content.field_main_image }}
     {% endif %}
+    </a>
     <div class="itk-boxlist-presentation--header-inner-wrapper">
       <h1 class="itk-boxlist-presentation--header"><a href="{{ url }}" title="{{ label }}">{{ label }}</a></h1>
       {{ content.field_sub_header }}
