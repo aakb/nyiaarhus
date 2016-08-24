@@ -14,7 +14,7 @@ field_name: field_main_image
 entity_type: node
 bundle: page
 label: 'Main Image'
-description: ''
+description: 'Billedet bliver vist øverst på sider i bredformat. Den optimale opløsning er 1920x400, systemet beskærer og resizer automatisk billedet. Bemærk at headeren (logo og navigation) er placeret ovenpå billedet og dækker noget af det.'
 required: false
 translatable: false
 default_value: {  }

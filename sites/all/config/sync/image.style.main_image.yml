@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: KWynylubudIRIVl2WWDY5B0wAzWaclSnmWYhmKBDfYg
 name: main_image
-label: 'Main Image (W: 1216)'
+label: 'Main Image'
 effects:
   30c6ef52-80ea-4990-87ac-556fd78f4ce5:
     uuid: 30c6ef52-80ea-4990-87ac-556fd78f4ce5

@@ -14,7 +14,7 @@ field_name: field_related_page_image
 entity_type: node
 bundle: page
 label: 'Related Page Image'
-description: 'Used when the page is displayed as an related page'
+description: 'Billedet bliver brugt til at vise en side som relateret, billedet vises i bredformat. Den optimale opløsning er 380x130, systemet beskærer og resizer automatisk billedet.'
 required: false
 translatable: false
 default_value: {  }
