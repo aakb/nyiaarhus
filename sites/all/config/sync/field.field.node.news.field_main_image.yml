@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_main_image
     - node.type.news
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 _core:
   default_config_hash: 0E-X6aFR1UsBrWs1wcjMeAW7axW_8P_aNYhasJ8Eirk
 id: node.news.field_main_image
@@ -14,7 +21,7 @@ field_name: field_main_image
 entity_type: node
 bundle: news
 label: 'Main Image'
-description: ''
+description: 'Billedet bliver vist øverst på sider i bredformat. Den optimale opløsning er 1920x400, systemet beskærer og resizer automatisk billedet. Bemærk at headeren (logo og navigation) er placeret ovenpå billedet og dækker noget af det.'
 required: false
 translatable: true
 default_value: {  }

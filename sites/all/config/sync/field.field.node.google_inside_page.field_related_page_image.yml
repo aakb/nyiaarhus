@@ -19,7 +19,7 @@ field_name: field_related_page_image
 entity_type: node
 bundle: google_inside_page
 label: 'Related Page Image'
-description: ''
+description: 'Billedet bliver vist øverst på sider i bredformat. Den optimale opløsning er 1920x400, systemet beskærer og resizer automatisk billedet. Bemærk at headeren (logo og navigation) er placeret ovenpå billedet og dækker noget af det.'
 required: false
 translatable: true
 default_value: {  }
