@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - itk_admin_links
+    - user
   theme:
     - nyiaarhus
 id: itkadminlinks
@@ -17,4 +18,11 @@ settings:
   label: 'ITK Admin links'
   provider: itk_admin_links
   label_display: visible
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      editor: editor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

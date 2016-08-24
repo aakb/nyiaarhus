@@ -9,12 +9,12 @@ _core:
 id: adminimal_theme_page_title
 theme: adminimal_theme
 region: header
-weight: -30
+weight: -5
 provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: 'Page title'
+  label: Sidetitel
   provider: core
   label_display: '0'
 visibility: {  }
