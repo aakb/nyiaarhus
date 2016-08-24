@@ -1,8 +1,9 @@
 uuid: 39ad6aa1-3662-46d7-96b9-e617f8f6f410
 langcode: da
-status: true
+status: false
 dependencies:
   module:
+    - system
     - user
   theme:
     - adminimal_theme
@@ -10,18 +11,18 @@ _core:
   default_config_hash: 862sIulDdHmF0vBU1s2j2_a_CwkxursrL0pIrMDzzOg
 id: adminimal_theme_login
 theme: adminimal_theme
-region: content
-weight: 10
+region: '-1'
+weight: -4
 provider: null
 plugin: user_login_block
 settings:
   id: user_login_block
-  label: 'User login'
+  label: 'Log ind'
   provider: user
   label_display: visible
 visibility:
   request_path:
     id: request_path
-    pages: "/user/reset/*\n/user/register\n/user/password"
+    pages: "/user/reset/*\r\n/user/register\r\n/user/password"
     negate: true
     context_mapping: {  }
