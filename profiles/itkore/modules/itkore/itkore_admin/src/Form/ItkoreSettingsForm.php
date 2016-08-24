@@ -47,39 +47,18 @@ class ItkoreSettingsForm extends FormBase {
       '#open' => TRUE,
     );
 
-    $form['frontpage_wrapper']['frontpage_title'] = array(
-      '#title' => $this->t('Title'),
+    $form['frontpage_wrapper']['frontpage_quote'] = array(
+      '#title' => $this->t('Quote'),
       '#type' => 'textfield',
-      '#default_value' => $config->get('itkore_frontpage.frontpage_title'),
+      '#default_value' => $config->get('itkore_frontpage.frontpage_quote'),
       '#weight' => '1',
     );
 
-    $form['frontpage_wrapper']['frontpage_lead'] = array(
-      '#title' => $this->t('Lead text'),
+    $form['frontpage_wrapper']['frontpage_quote_author'] = array(
+      '#title' => $this->t('Quote author'),
       '#type' => 'textfield',
-      '#default_value' => $config->get('itkore_frontpage.frontpage_lead'),
+      '#default_value' => $config->get('itkore_frontpage.frontpage_quote_author'),
       '#weight' => '2',
-    );
-
-    $form['frontpage_wrapper']['frontpage_sub'] = array(
-      '#title' => $this->t('Sub text'),
-      '#type' => 'textfield',
-      '#default_value' => $config->get('itkore_frontpage.frontpage_sub'),
-      '#weight' => '3',
-    );
-
-    $form['frontpage_wrapper']['frontpage_button'] = array(
-      '#title' => $this->t('Button text'),
-      '#type' => 'textfield',
-      '#default_value' => $config->get('itkore_frontpage.frontpage_button'),
-      '#weight' => '4',
-    );
-
-    $form['frontpage_wrapper']['frontpage_link'] = array(
-      '#title' => $this->t('Button link'),
-      '#type' => 'textfield',
-      '#default_value' => $config->get('itkore_frontpage.frontpage_link'),
-      '#weight' => '5',
     );
 
     $fids = array();
@@ -194,11 +173,8 @@ class ItkoreSettingsForm extends FormBase {
 
     // Set the rest of the configuration values.
     $this->getBaseConfig()->setMultiple(array(
-      'itkore_frontpage.frontpage_title' => $form_state->getValue('frontpage_title'),
-      'itkore_frontpage.frontpage_lead' => $form_state->getValue('frontpage_lead'),
-      'itkore_frontpage.frontpage_sub' => $form_state->getValue('frontpage_sub'),
-      'itkore_frontpage.frontpage_button' => $form_state->getValue('frontpage_button'),
-      'itkore_frontpage.frontpage_link' => $form_state->getValue('frontpage_link'),
+      'itkore_frontpage.frontpage_quote' => $form_state->getValue('frontpage_quote'),
+      'itkore_frontpage.frontpage_quote_author' => $form_state->getValue('frontpage_quote_author'),
       'itkore_footer.footer_text' => $form_state->getValue('footer_text')['value'],
       'itkore_footer.footer_twitter' => $form_state->getValue('footer_twitter'),
       'itkore_footer.footer_instagram' => $form_state->getValue('footer_instagram'),

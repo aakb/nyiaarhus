@@ -29,11 +29,8 @@ function itkore_admin_preprocess_page(&$variables) {
   // Front page variables for page template.
   if (isset($config) && $variables['is_front'] == TRUE) {
     // Set variables.
-    $variables['front_title'] = $config->get('itkore_frontpage.frontpage_title');
-    $variables['front_lead'] = $config->get('itkore_frontpage.frontpage_lead');
-    $variables['front_sub'] = $config->get('itkore_frontpage.frontpage_sub');
-    $variables['front_button_text'] = $config->get('itkore_frontpage.frontpage_button');
-    $variables['front_button_link'] = $config->get('itkore_frontpage.frontpage_link');
+    $variables['frontpage_quote'] = $config->get('itkore_frontpage.frontpage_quote');
+    $variables['frontpage_quote_author'] = $config->get('itkore_frontpage.frontpage_quote_author');
   }
 
   // Footer variables for page template.

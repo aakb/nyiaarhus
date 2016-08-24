@@ -84,16 +84,22 @@
     </div>
   </nav>
 </div>
+{% if frontpage_quote and frontpage_quote_author %}
 <div class="header-quote" role="banner" id="home" style="background-image: url({{ front_image }})">
   <div class="header-quote--inner">
-    <p class="header-quote--content">
-      Aarhus er ikke en by man flytter fra - det er en by man flytter til
-    </p>
-    <p class="header-quote--author">
-      - Studerende i Aarhus
-    </p>
+    {% if frontpage_quote %}
+      <p class="header-quote--content">
+        {{ frontpage_quote }}
+      </p>
+    {% endif %}
+    {% if frontpage_quote_author %}
+      <p class="header-quote--author">
+        {{ frontpage_quote_author }}
+      </p>
+    {% endif %}
   </div>
 </div>
+{% endif %}
 
 <main role="main" class="content">
   <div class="content--inner">
