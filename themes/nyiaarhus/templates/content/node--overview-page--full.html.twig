@@ -67,7 +67,6 @@
  * @ingroup themeable
  */
 #}
-
 <div class="content--header-wrapper">
   {% if node_no_image %}
     <div class="content--image-wrapper" style="background-image: url('{{ default_image }}')"></div>
@@ -80,9 +79,19 @@
   </div>
 </div>
 <div class="content--inner">
+  {% if content.addtoany %}
+  <div class="addtoany is-sticky is-aligned-top-right">
+    <span class="addtoany--text">{% trans %}Share this page:{% endtrans  %}</span> {{ content.addtoany }}
+  </div>
+  {% endif %}
   <div class="content--lead">
     {{ content.field_lead }}
   </div>
-  {{ content|without('field_main_image', 'field_sub_header', 'field_lead', 'comment', 'links', 'field_pages') }}
+  {{ content|without('field_main_image', 'field_sub_header', 'field_lead', 'comment', 'links', 'field_pages', 'addtoany') }}
+  {% if content.addtoany %}
+    <div class="addtoany is-inline">
+      <span class="addtoany--text">{% trans %}Share this page:{% endtrans  %}</span> {{ content.addtoany }}
+    </div>
+  {% endif %}
 </div>
 {{ content.field_pages }}

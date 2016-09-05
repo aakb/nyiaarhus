@@ -80,8 +80,18 @@
   </div>
 </div>
 <div class="content--inner">
+  {% if content.addtoany %}
+    <div class="addtoany is-sticky is-aligned-top-right">
+      <span class="addtoany--text">{% trans %}Share this page:{% endtrans  %}</span> {{ content.addtoany }}
+    </div>
+  {% endif %}
   <div class="content--lead">
     {{ content.field_lead }}
   </div>
-  {{ content|without('field_main_image', 'field_sub_header', 'field_lead', 'comment', 'links') }}
+  {{ content|without('field_main_image', 'field_sub_header', 'field_lead', 'comment', 'links', 'addtoany') }}
+  {% if content.addtoany %}
+    <div class="addtoany is-inline">
+      <span class="addtoany--text">{% trans %}Share this page:{% endtrans  %}</span> {{ content.addtoany }}
+    </div>
+  {% endif %}
 </div>

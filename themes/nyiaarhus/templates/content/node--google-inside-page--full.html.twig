@@ -70,6 +70,11 @@
 
 <div class="google-inside">
   <div class="google-inside--inner">
+    {% if content.addtoany %}
+      <div class="addtoany is-sticky is-aligned-right">
+        <span class="addtoany--text">{% trans %}Share this page:{% endtrans  %}</span> {{ content.addtoany }}
+      </div>
+    {% endif %}
     <h1 class="google-inside--header">{{ label }}</h1>
     <div class="google-inside--link-wrapper">
       {{ content.field_google_inside_link }}
