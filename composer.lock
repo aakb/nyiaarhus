@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ab1e94910713643ff77d12e233850f06",
-    "content-hash": "08ffdb4233c98499d6186aba876ed153",
+    "hash": "b91421c474f0cdecd63328a2e387e62c",
+    "content-hash": "8e78d72c7d70423686cc404c40de0126",
     "packages": [
         {
             "name": "composer/installers",
@@ -570,6 +570,37 @@
             "time": "2014-09-09 13:34:57"
         },
         {
+            "name": "drupal/addtoany",
+            "version": "8.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/addtoany",
+                "reference": "cd428eced42b16946d6006c89b1709343eb6dfea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/addtoany-8.x-1.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Share buttons by AddToAny, including the AddToAny universal sharing button, Facebook, Twitter, Google+, Pinterest, and over 100 more on the <a href=\"https://www.addtoany.com/\" target=\"_blank\">AddToAny</a> platform.",
+            "homepage": "https://www.drupal.org/project/addtoany",
+            "time": "2016-06-17 06:34:08"
+        },
+        {
             "name": "drupal/adminimal_theme",
             "version": "8.1.1",
             "source": {
@@ -890,7 +921,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/google_analytics-8.x-2.1.zip",
-                "reference": null,
+                "reference": "5a44ad5643af5510ec15c07727ce0d124ee1c1c1",
                 "shasum": null
             },
             "require": {
