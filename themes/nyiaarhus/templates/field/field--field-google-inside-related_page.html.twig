@@ -43,5 +43,5 @@
     {{ label }}
   {% endif %}
   {% for item in items %}
-    <a href="{{ item.content['#url'] }}" class="google-inside--link button is-inverted">{{ "Look inside"|trans }} {{ item.content['#title'] }}</a>
+    <a href="{{ item.content['#url'] }}" class="google-inside--link button is-inverted">{{ item.content['#title'] }}</a>
   {% endfor %}

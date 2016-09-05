@@ -21,6 +21,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
+      google_inside_page: google_inside_page
       overview_page: overview_page
       page: page
     sort:
