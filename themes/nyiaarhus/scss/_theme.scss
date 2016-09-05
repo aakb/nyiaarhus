@@ -13,12 +13,12 @@ $gray-dark:        lighten($black, 50%);
 $gray-darker:      lighten($black, 40%);
 $gray-darkest:     lighten($black, 12%);
 
-$theme-color:             #81902b;
+$theme-color:             #157bb3;
 $theme-color-secondary:   #7191b2;
 $theme-color-tertiery:    #d6763e;
 
-$link-color:       $theme-color;
-$link-color-hover: darken($link-color, 25%);
+$link-color:              $theme-color;
+$link-color-hover:        darken($link-color, 25%);
 
 $message-color:                  #f1f1f1;
 $message-info-color:             #dff2bf;
