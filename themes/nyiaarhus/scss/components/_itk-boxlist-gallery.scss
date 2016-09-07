@@ -84,7 +84,8 @@
     position: relative;
 
     &:before {
-      background-image: linear-gradient(to bottom, transparent 50%, $white 100%);
+      /* using transparentize($white, 1) because of possible bug in Safari */
+      background-image: linear-gradient(to bottom, transparentize($white, 1) 50%, $white 100%);
       bottom: 0;
       content: "";
       left: 0;
