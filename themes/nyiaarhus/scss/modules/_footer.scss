@@ -31,10 +31,10 @@
     color: $white;
     display: flex;
     flex-flow: row wrap;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $layout-max-width-desk;
-    padding: $spacing-lap;
+    margin-left: $spacing-lap;
+    margin-right: $spacing-lap;
+    padding-bottom: $spacing-lap;
+    padding-top: $spacing-lap;
 
     @include breakpoint($breakpoint-tablet) {
       padding: $spacing-tablet;
@@ -42,6 +42,12 @@
 
     @include breakpoint($breakpoint-desk) {
       padding: $spacing-desk;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $layout-max-width-desk;
     }
 
     ul,
