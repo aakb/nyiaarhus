@@ -16,7 +16,17 @@
   flex-direction: row;
   width: 100%;
 
+  a {
+    @include strip-link-styles($theme-color-tertiery);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &--content {
+    background: url("../images/aak-logo.svg") no-repeat right center;
+    background-size: auto 75%;
     box-sizing: border-box;
     color: $white;
     display: flex;
