@@ -8,6 +8,7 @@
   background-color: $white;
   box-sizing: border-box;
   display: flex;
+  overflow: hidden;
   transition: width .25s;
 
   &.is-sticky {

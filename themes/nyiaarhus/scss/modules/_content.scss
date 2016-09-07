@@ -91,16 +91,15 @@
     margin-bottom: 40px;
   }
 
-  &--lead,
-  &--text {
-    @include layout-spacing;
-  }
-
   &--lead {
+    @include layout-spacing;
+
     font-weight: 600;
   }
 
   &--text {
+    @include layout-spacing;
+
     h2,
     h3,
     h4 {
