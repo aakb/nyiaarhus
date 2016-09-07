@@ -79,6 +79,11 @@
   </div>
 </div>
 <div class="content--inner">
+  {% if content.addtoany %}
+  <div class="addtoany is-sticky is-aligned-top-right">
+    <span class="addtoany--text">{% trans %}Share this page:{% endtrans  %}</span> {{ content.addtoany }}
+  </div>
+  {% endif %}
   <div class="content--lead">
     {{ content.field_lead }}
   </div>
