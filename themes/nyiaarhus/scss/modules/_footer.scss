@@ -14,6 +14,7 @@
   background-color: $black;
   flex: 1 0 auto;
   flex-direction: row;
+  margin-bottom: 120px;
   width: 100%;
 
   a {
@@ -25,29 +26,36 @@
   }
 
   &--content {
-    background: url("../images/aak-logo.svg") no-repeat right center;
-    background-size: auto 75%;
+    background-image: url("../images/aak-logo.svg"), url("../images/skyline.svg");
+    background-position: right 10px top 40px, center bottom -7px;
+    background-repeat: no-repeat;
+    background-size: auto 35%, 95% auto;
     box-sizing: border-box;
     color: $white;
     display: flex;
     flex-flow: row wrap;
     margin-left: $spacing-lap;
     margin-right: $spacing-lap;
-    padding-bottom: $spacing-lap;
-    padding-top: $spacing-lap;
+    padding-bottom: 130px;
+    padding-top: 65px;
 
     @include breakpoint($breakpoint-tablet) {
-      padding: $spacing-tablet;
+      background-position: right 30px top 40px, center bottom -7px;
+      padding-left: $spacing-tablet;
+      padding-right: $spacing-tablet;
     }
 
     @include breakpoint($breakpoint-desk) {
-      padding: $spacing-desk;
+      padding-left: $spacing-desk;
+      padding-right: $spacing-desk;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
       margin-left: auto;
       margin-right: auto;
       max-width: $layout-max-width-desk;
+      padding-bottom: 155px;
+      padding-top: 65px;
     }
 
     ul,
