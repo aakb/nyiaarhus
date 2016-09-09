@@ -29,7 +29,7 @@
     background-image: url("../images/aak-logo.svg"), url("../images/skyline.svg");
     background-position: right 10px top 40px, center bottom -7px;
     background-repeat: no-repeat;
-    background-size: auto 35%, 95% auto;
+    background-size: auto 25%, 95% auto;
     box-sizing: border-box;
     color: $white;
     display: flex;
@@ -37,10 +37,11 @@
     margin-left: $spacing-lap;
     margin-right: $spacing-lap;
     padding-bottom: 130px;
-    padding-top: 65px;
+    padding-top: 50px;
 
     @include breakpoint($breakpoint-tablet) {
       background-position: right 30px top 40px, center bottom -7px;
+      background-size: auto 35%, 95% auto;
       padding-left: $spacing-tablet;
       padding-right: $spacing-tablet;
     }
