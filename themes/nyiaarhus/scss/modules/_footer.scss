@@ -14,7 +14,7 @@
   background-color: $black;
   flex: 1 0 auto;
   flex-direction: row;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   width: 100%;
 
   a {
@@ -27,7 +27,7 @@
 
   &--content {
     background-image: url("../images/aak-logo.svg"), url("../images/skyline.svg");
-    background-position: right 10px top 40px, center bottom -7px;
+    background-position: right 10px top 40px, center bottom -8px;
     background-repeat: no-repeat;
     background-size: auto 25%, 95% auto;
     box-sizing: border-box;
