@@ -39,7 +39,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
-    max-width: 300px;
+    max-width: 260px;
     position: relative;
     z-index: z($z-index-elements, header);
 
@@ -68,7 +68,6 @@
     font-weight: 800;
     line-height: 150%;
     position: relative;
-    text-transform: uppercase;
 
     &:before {
       background: url("../images/quote.png") no-repeat;
@@ -76,7 +75,7 @@
       content: "";
       height: 30px;
       left: -40px;
-      opacity: .25;
+      opacity: .4;
       position: absolute;
       top: -20px;
       width: 30px;
