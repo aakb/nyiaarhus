@@ -1,7 +1,0 @@
-settings.php
-settings.local.php
-services.local.yml
-sites/sites.php
-sites/*/files
-vendor
-modules
