@@ -1,0 +1,32 @@
+/**
+ *
+ * Logo.
+ *
+ */
+
+
+// Logo styling.
+// This handles the default logo behaviour whether it is sticky or not.
+
+.logo,
+.logo.is-sticky,
+.is-frontpage .logo.is-sticky {
+  @include strip-link-styles($white);
+  @include layout-spacing;
+
+  align-items: center;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 36px;
+  max-width: 75%;
+  width: auto;
+  z-index: z($z-index-elements, logo);
+
+  // If text instead of image.
+  &--text {
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+}
