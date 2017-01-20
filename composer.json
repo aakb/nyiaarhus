@@ -28,7 +28,8 @@
         "drupal/itkore": "~1.0",
         "drupal/role_delegation": "1.x-dev",
         "drupal/google_analytics": "^2.1",
-        "drupal/addtoany": "^1.7"
+        "drupal/addtoany": "^1.7",
+        "drupal/itkore-theme": "dev-master"
 		},
     "require-dev": {
         "behat/mink": "~1.7",
