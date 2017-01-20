@@ -728,4 +728,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'itkore';
-$config_directories['sync'] = 'sites/default/files/config_S2gz8zgNVUK2mu-FYAmOK-z-gmz1166pxz6emN4igADFOTrLypt-FxwmEkJIQ8jyunasGsl32A/sync';
+$config_directories['sync'] = '/vagrant/htdocs/config/sync';
