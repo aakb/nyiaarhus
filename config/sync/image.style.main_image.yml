@@ -1,0 +1,16 @@
+uuid: 4524b1b7-9b17-476a-b870-4bbde9fbbb81
+langcode: da
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KWynylubudIRIVl2WWDY5B0wAzWaclSnmWYhmKBDfYg
+name: main_image
+label: 'Main Image'
+effects:
+  30c6ef52-80ea-4990-87ac-556fd78f4ce5:
+    uuid: 30c6ef52-80ea-4990-87ac-556fd78f4ce5
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1920
+      height: 400

@@ -1,0 +1,49 @@
+label: 'ITKore Frontpage news'
+description: 'All content promoted to the front page.'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      title: Nyheder
+      fields:
+        created_1:
+          separator: ', '
+        created:
+          separator: ', '
+        title:
+          separator: ', '
+        field_main_image:
+          separator: ', '
+        field_related_page_teaser:
+          separator: ', '
+        nothing:
+          alter:
+            text: "<article class=\"itk-boxlist-news--item\">\n  <header>\n    <h2 class=\"itk-boxlist-news--header\"><a href=\"{{ path }}\">{{ title }}</a></h2>\n<div class=\"itk-boxlist-news--meta\">\n      <p class=\"itk-boxlist-news--meta-wrapper\">\n        <span class=\"itk-boxlist-news--icon\"><img src=\"/sites/all/themes/itkore/templates/svgs/calendar.svg\"/></span>{{ created }} \n      </p>\n    </div>\n    <p>{{ field_related_page_teaser }}</p>\n    <a href=\"{{ path }}\">{% trans %}Read news{% endtrans %}</a>\n  </header>\n  <figure>{{ field_main_image }}</figure>\n</article>"
+      use_more_text: 'All news'
+    display_title: Master
+  block_1:
+    display_title: Block
+  page_1:
+    display_title: Page
+    display_options:
+      use_more_text: 'All news'
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      header:
+        area_text_custom:
+          content: '<h1 class="content--header">Nyheder</h1>'

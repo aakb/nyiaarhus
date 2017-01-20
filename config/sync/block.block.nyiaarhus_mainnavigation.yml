@@ -1,0 +1,26 @@
+uuid: 08fbce85-2b14-4a5c-9eff-5b7a1eacbece
+langcode: da
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - nyiaarhus
+_core:
+  default_config_hash: qFCpbZLkQI8nJCiIhOUMVd3hkMXsTGlIRiH6Cp6Yehw
+id: nyiaarhus_mainnavigation
+theme: nyiaarhus
+region: nav_menu
+weight: -1
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

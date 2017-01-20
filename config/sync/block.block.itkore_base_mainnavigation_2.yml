@@ -1,0 +1,26 @@
+uuid: 1d9a661a-dc8e-4e25-8380-b075ede7837f
+langcode: da
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - itkore_base
+_core:
+  default_config_hash: OGGhkiwLnZKS2i2MYuZBVUUktAM7iZlwkQs5FmdipGU
+id: itkore_base_mainnavigation_2
+theme: itkore_base
+region: hamburger
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 3
+visibility: {  }

@@ -1,0 +1,26 @@
+uuid: 15ccea41-4ac1-469d-b629-9a43cb72510d
+langcode: da
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 1C1UtTbreYjCP5eUuJOX6irET8zIXmdnZqXuhl5hSCQ
+id: pages
+label: Pages
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parent:url:path]/[node:title]'
+selection_criteria:
+  99d2535b-f05f-401a-a6d1-7eeaf075b90e:
+    id: node_type
+    bundles:
+      google_inside_page: google_inside_page
+      overview_page: overview_page
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 99d2535b-f05f-401a-a6d1-7eeaf075b90e
+selection_logic: and
+weight: -5
+relationships: {  }

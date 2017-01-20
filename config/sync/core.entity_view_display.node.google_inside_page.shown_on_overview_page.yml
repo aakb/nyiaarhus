@@ -1,0 +1,42 @@
+uuid: d9756d85-57a6-448b-b4c3-20b9d6143fb5
+langcode: da
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.shown_on_overview_page
+    - field.field.node.google_inside_page.field_google_inside_embed_link
+    - field.field.node.google_inside_page.field_google_inside_link
+    - field.field.node.google_inside_page.field_google_inside_related_page
+    - field.field.node.google_inside_page.field_related_page_image
+    - field.field.node.google_inside_page.field_related_page_teaser
+    - image.style.related_page_image
+    - node.type.google_inside_page
+  module:
+    - image
+    - user
+id: node.google_inside_page.shown_on_overview_page
+targetEntityType: node
+bundle: google_inside_page
+mode: shown_on_overview_page
+content:
+  field_related_page_image:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: related_page_image
+      image_link: content
+    third_party_settings: {  }
+  field_related_page_teaser:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_google_inside_embed_link: true
+  field_google_inside_link: true
+  field_google_inside_related_page: true
+  langcode: true
+  links: true
