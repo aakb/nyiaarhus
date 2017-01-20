@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "93171618c3ed3fd30c96efcc054a63a4",
-    "content-hash": "9944915075d55b804a4b567eeeaf38d7",
+    "hash": "0b79eee510fb7cb6f12fafa584ca60de",
+    "content-hash": "c1e1666e2502c896754dcab1340e7bef",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1785,31 +1785,6 @@
                 "Drupal"
             ],
             "time": "2017-01-11 10:20:11"
-        },
-        {
-            "name": "drupal/itkore-theme",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aakb/itkore-theme.git",
-                "reference": "35209017883353fe825568b82f65185ac8307f4c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aakb/itkore-theme/zipball/35209017883353fe825568b82f65185ac8307f4c",
-                "reference": "35209017883353fe825568b82f65185ac8307f4c",
-                "shasum": ""
-            },
-            "type": "drupal-theme",
-            "notification-url": "https://packagist.etek.dk/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Setup itkore theme",
-            "keywords": [
-                "Drupal"
-            ],
-            "time": "2016-09-29 11:45:50"
         },
         {
             "name": "drupal/metatag",
@@ -6608,8 +6583,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/role_delegation": 20,
-        "drupal/itkore-theme": 20
+        "drupal/role_delegation": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
