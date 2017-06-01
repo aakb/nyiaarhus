@@ -24,6 +24,10 @@ targetEntityType: node
 bundle: page
 mode: promoted_to_frontpage
 content:
+  addtoany:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
   field_related_page_image:
     type: image
     weight: 0

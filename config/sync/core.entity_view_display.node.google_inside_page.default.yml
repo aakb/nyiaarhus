@@ -16,6 +16,10 @@ targetEntityType: node
 bundle: google_inside_page
 mode: default
 content:
+  addtoany:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
   field_google_inside_embed_link:
     weight: 3
     label: hidden
