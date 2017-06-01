@@ -25,6 +25,10 @@ targetEntityType: node
 bundle: overview_page
 mode: shown_on_overview_page
 content:
+  addtoany:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
   body:
     type: text_trimmed
     weight: 2

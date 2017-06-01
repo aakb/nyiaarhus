@@ -24,6 +24,10 @@ targetEntityType: node
 bundle: overview_page
 mode: shown_on_page
 content:
+  addtoany:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
   field_related_page_image:
     type: image
     weight: 0
