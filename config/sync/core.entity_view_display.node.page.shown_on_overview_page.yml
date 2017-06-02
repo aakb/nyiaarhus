@@ -1,0 +1,61 @@
+uuid: 1f77d316-1c75-4c16-9954-c491a31a945f
+langcode: da
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.shown_on_overview_page
+    - field.field.node.page.body
+    - field.field.node.page.field_lead
+    - field.field.node.page.field_main_image
+    - field.field.node.page.field_pages
+    - field.field.node.page.field_paragraphs
+    - field.field.node.page.field_related_page_image
+    - field.field.node.page.field_related_page_teaser
+    - field.field.node.page.field_sub_header
+    - image.style.main_image
+    - node.type.page
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: 1qW54MwLynufS2OdnbY8ykreyTklPPcjDGxKoZ4Zs50
+id: node.page.shown_on_overview_page
+targetEntityType: node
+bundle: page
+mode: shown_on_overview_page
+content:
+  addtoany:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    type: text_trimmed
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 300
+    third_party_settings: {  }
+  field_lead:
+    type: string
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_main_image:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: main_image
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  field_pages: true
+  field_paragraphs: true
+  field_related_page_image: true
+  field_related_page_teaser: true
+  field_sub_header: true
+  langcode: true
+  links: true
