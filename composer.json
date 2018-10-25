@@ -16,7 +16,7 @@
         },
         {
             "type": "composer",
-            "url": "https://packagist.etek.dk"
+            "url": "https://packagist.itkdev.dk"
         }
     ],
     "require": {

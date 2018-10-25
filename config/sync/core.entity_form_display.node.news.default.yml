@@ -127,7 +127,8 @@ content:
   langcode:
     type: language_select
     weight: 11
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
     region: content
   path:
@@ -141,6 +142,13 @@ content:
     settings:
       display_label: true
     weight: 7
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 121
     third_party_settings: {  }
     region: content
   sticky:
@@ -165,6 +173,11 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
+    settings: {  }
     third_party_settings: {  }
     region: content
 hidden: {  }
