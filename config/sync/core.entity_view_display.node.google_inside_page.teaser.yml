@@ -27,6 +27,7 @@ content:
       image_style: related_page_image
       image_link: content
     third_party_settings: {  }
+    region: content
   field_related_page_teaser:
     type: string
     weight: 1
@@ -34,7 +35,9 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
 hidden:
+  addtoany: true
   field_google_inside_embed_link: true
   field_google_inside_link: true
   field_google_inside_related_page: true

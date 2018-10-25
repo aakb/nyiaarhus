@@ -10,7 +10,7 @@ _core:
   default_config_hash: XqrbIQwQ11q-gs4UtFeUjH0VUJusjNhHk1j6P2y-n5I
 id: nyiaarhus_messages
 theme: nyiaarhus
-region: '-1'
+region: hamburger
 weight: -3
 provider: null
 plugin: system_messages_block
