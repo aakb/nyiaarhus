@@ -39,7 +39,6 @@ module:
   metatag: 0
   node: 0
   page_cache: 0
-  paragraphs: 0
   path: 0
   redirect: 0
   redirect_404: 0
@@ -58,6 +57,7 @@ module:
   pathauto: 1
   content_translation: 10
   views: 10
+  paragraphs: 11
   itkore: 1000
 theme:
   stable: 0
@@ -69,3 +69,4 @@ theme:
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 langcode: da
+profile: itkore
