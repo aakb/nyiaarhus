@@ -29,6 +29,7 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
   body:
     type: text_trimmed
     weight: 2
@@ -36,6 +37,7 @@ content:
     settings:
       trim_length: 1200
     third_party_settings: {  }
+    region: content
   field_lead:
     type: string
     weight: 1
@@ -43,6 +45,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_main_image:
     type: image
     weight: 0
@@ -51,6 +54,7 @@ content:
       image_style: main_image
       image_link: content
     third_party_settings: {  }
+    region: content
 hidden:
   field_pages: true
   field_paragraphs: true

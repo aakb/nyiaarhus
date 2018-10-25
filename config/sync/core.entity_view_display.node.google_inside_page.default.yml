@@ -20,6 +20,7 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_google_inside_embed_link:
     weight: 3
     label: hidden
@@ -27,6 +28,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_google_inside_link:
     weight: 1
     label: hidden
@@ -34,6 +36,7 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   field_google_inside_related_page:
     weight: 4
     label: hidden
@@ -41,6 +44,7 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
 hidden:
   field_related_page_image: true
   field_related_page_teaser: true
